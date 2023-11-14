@@ -15,4 +15,4 @@
   from {transform:rotate(0deg);}
   to {transform:rotate(360deg);}
 }
-.spin-anim {animation-name:spin; animation-duration: 700ms; animation-iteration-count: 2; animation-delay: 500ms;}
+.spin-anim {animation-name:spin; animation-duration: 700ms; animation-iteration-count: 2; animation-delay: 1000ms;}
