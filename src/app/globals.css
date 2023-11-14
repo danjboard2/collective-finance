@@ -18,4 +18,4 @@
   50% { transform: rotate(360deg); }
   100%  { transform: rotate(360deg); }
 }
-.spin-anim {animation-name:spin; animation-duration: 1400ms; animation-iteration-count: 2; animation-delay: 500ms;}
+.spin-anim {animation-name:spin; animation-duration: 1200ms; animation-iteration-count: 2; animation-delay: 500ms;}
