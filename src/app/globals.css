@@ -22,6 +22,19 @@
   from {opacity: 1}
   to {opacity: 0}
 }
+body {background:#131313;}
 .hide-overflow {height:100vh; overflow:hidden;}
 .spin-anim {animation-name:spin; animation-duration: 1500ms; animation-iteration-count: 2; animation-delay: 500ms;}
 #splash {animation-name:fadeOut; animation-duration:0.5s; animation-delay:3s; backface-visibility:visible;}
+#gold {background: linear-gradient(180deg, rgb(255, 255, 255), rgba(255, 168, 0, 0.5) 100%);
+background-clip: text;
+-webkit-background-clip: text;
+-webkit-text-fill-color: transparent;}
+#silver {background: linear-gradient(180deg, #FFF 0%, rgba(178, 178, 178, 0.00) 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;}
+  #diamond {background: linear-gradient(180deg, #FFF 0%, rgba(0, 240, 255, 0.30) 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;}
