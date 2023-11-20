@@ -1,0 +1,223 @@
+* {
+  box-sizing: border-box;
+}
+
+.company-timeline.two {
+  padding: 0px 0px 120px 0px;
+}
+.company-timeline:before {
+  width: 100%;
+  height: 100vw;
+  content: "";
+  display: none;
+}
+.company-timeline .container {
+  width: 100%;
+}
+.company-timeline .timeline-heading {
+  width: 100%;
+  max-width: 100%;
+  margin-bottom: 0;
+  margin-bottom: 108px;
+  position: relative;
+}
+.company-timeline-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+}
+.company-timeline-list {
+  position: sticky;
+  top: 50%;
+  width: 200px !important;
+  margin-left: 40px;
+  display: flex;
+  flex-wrap: wrap;
+  margin-right: -172px;
+  z-index: 20;
+}
+.company-timeline-list .company-timeline-year {
+  position: relative;
+  width: 254px;
+  height: 80px;
+  margin-left: auto;
+  overflow: hidden;
+  transform: translateX(5px);
+  z-index: 10;
+}
+.company-timeline-list .timeline-date {
+  position: absolute;
+  left: -5px;
+  top: 0;
+  width: 100%;
+  display: block;
+  font-size: 80px;
+  font-weight: 300;
+  line-height: 1;
+  padding-right: 55px;
+}
+.company-timeline-list .timeline-date .date {
+ /* background: #ff3d00; */
+ z-index: 10;
+}
+
+.company-timeline-list .circle {
+  position: absolute;
+  left: 5px;
+  top: 63%;
+  transform: translateY(-50%);
+  width: 47px;
+  height: 49px;
+  border: 4px solid #ff3d00;
+  border-radius: 3px 3px 3px 3px;
+  background-color: #000;
+  border-right: 0px;
+  z-index: 8;
+}
+.company-timeline.two .company-timeline-list .circle {
+    background-color: white;
+}
+.company-timeline-list .circle:before {
+  position: absolute;
+  right: -2px;
+  top: 0px;
+  transform: translate(-50%, -50%);
+  border-radius: 0px;
+  width: 4px;
+  height: 6px;
+  background-color: #ff3d00;
+  border-radius: 0px 3px 0px 0px;
+  content: "";
+}
+.company-timeline-list .circle:after {
+  position: absolute;
+  right: -2px;
+  bottom: -6px;
+  transform: translate(-50%, -50%);
+  border-radius: 0px;
+  width: 4px;
+  height: 6px;
+  background-color: #ff3d00;
+  border-radius: 0px 0px 3px 0px;
+  content: "";
+}
+.company-timeline-slider {
+  width: 90%;
+  margin-left: 0px;
+  margin-top: 63px;
+  border-left: 1px solid #C2D7DA;
+  overflow: visible;
+}
+.company-timeline-slider .slick-list {
+  overflow: visible !important;
+}
+.company-timeline-slider .slick-track {
+  display: block;
+}
+.company-timeline-block {
+  position: relative;
+  display: block;
+  margin-top: 0px;
+  padding-top: 26px;
+}
+.company-timeline-block:first-child {
+  margin-top: 0;
+  padding-top: 0;
+}
+.company-timeline-block .timeline-date {
+  font-size: 80px;
+  font-weight: 300;
+  line-height: 1;
+  padding-right: 55px;
+  display: none;
+}
+.company-timeline-block.has-media {
+  padding-top: 0;
+}
+.company-timeline-block.has-media .circle {
+  top: 32px;
+}
+.timeline-date:first-child .date span.date .date2 {
+  opacity: 1 !important;
+}
+.company-timeline-block .circle {
+    position: absolute;
+    left: -202px;
+    top: 63%;
+    transform: translateY(-50%);
+    width: 39px;
+    height: 42px;
+    border: 3px solid #ff3d00;
+    border-radius: 5px 0px 0px 5px;
+    background-color: #000;
+    border-right: 0px;
+    display: none;
+    z-index: 0;
+}
+.company-timeline-block .circle:before {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 6px;
+  width: 6px;
+  height: 6px;
+  background-color: #F80964;
+  display: none;
+  content: "";
+}
+.company-timeline-block .image-block {
+  margin-bottom: 30px;
+}
+.company-timeline-block h4 {
+  margin-bottom: 10px;
+  margin-top: 0;
+}
+.company-timeline-block p {
+  line-height: 1.75;
+}
+.company-timeline-list .timeline-date .date2.finished  {opacity:0 !important;}
+.company-timeline-list .timeline-date .date2 {opacity:0;margin-left: 12px;}
+.timeline-heading h4.roadmap {
+  position: absolute;
+  font-weight: 700;
+  color: #000;
+}
+
+/* timeline 2022 - timeline-two */
+
+.company-timeline.two .timeline-heading h4.roadmap {
+  color: #fff;
+}
+
+/* timeline 2023 */
+.timeline .three {background: linear-gradient(180deg, #1A1A1A 0%, #000 30%);}
+@media screen and (min-width:1024px) and (max-width: 1440px){
+.company-timeline-list .circle {
+  width: 43px;
+  height: 45px;
+}
+}
+@media screen and (max-width: 767px){ /* only on small devices and below */
+.company-timeline .timeline-heading {
+  margin-bottom: 0px;    width: 100%;
+}
+.company-timeline-list .company-timeline-year {
+  overflow: visible;
+}
+ .company-timeline-slider {margin-top:0px; margin-left:40px;}
+ .company-timeline-list .timeline-date {left: -32px;}
+}
+@media screen and (max-width: 479px){ /* only on small devices and below */
+.company-timeline-slider {
+  margin-left: 20px;
+}
+.company-timeline-list .timeline-date {
+  left: -45px;
+}
+.company-timeline-list .circle {
+  width: 32px;
+  height: 34px;
+  top: 66% !important;
+}
+}

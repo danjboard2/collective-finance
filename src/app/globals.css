@@ -2,6 +2,28 @@
 @tailwind components;
 @tailwind utilities;
 
+@font-face {
+  font-family: 'Gilroy';
+  src: url("../../public/media/fonts/Gilroy-Regular.ttf") format("opentype");
+  font-weight:normal;
+}
+@font-face {
+  font-family: 'Gilroy';
+  src: url("../../public/media/fonts/Gilroy-Light.ttf") format("opentype");
+  font-weight:light;
+}
+@font-face {
+  font-family: 'Gilroy';
+  src: url("../../public/media/fonts/Gilroy-Bold.ttf") format("opentype");
+  font-weight:bold; 
+}
+@font-face {
+  font-family: 'Gilroy';
+  src: url("../../public/media/fonts/Gilroy-RegularItalic.ttf") format("opentype");
+  font-style:italic
+}
+h1,h2,h3,h4,h5,h6,p,span,ul,li,strong,b,a,div,button,textarea,input,select,option,form,fieldset,legend,table,td,th,tr,thead,tbody,tfoot,blockquote,pre,code,em,small,img,video,iframe,canvas,svg,article,aside,footer,header,nav,section{font-family:"Gilroy", Arial, sans-serif}
+
 /* spin animation */
 @-moz-keyframes spin {
   0% { -moz-transform:rotate(0deg)}

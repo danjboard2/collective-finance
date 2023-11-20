@@ -35,7 +35,7 @@ function updateAnimation(i:any, lastPosition:any, baseName:any, hexagonType:any)
     const size = Math.random() * (150 - 50) + 50;
   
     // Random opacity between 0.4 and 1
-    const opacity = Math.random() * (0.6 - 0.2) + 0.2;
+    const opacity = Math.random() * (0.3 - 0.2) + 0.2;
   
     // Default values for server-side rendering
     let maxTop = 100;
@@ -54,17 +54,17 @@ function updateAnimation(i:any, lastPosition:any, baseName:any, hexagonType:any)
     const top = Math.random() * maxTop;
     const left = Math.random() * maxLeft;
   
-    return { top: `${top}%`, left: `${left}%`, width: `${size}px`, height: `${size}px`, opacity, animation: `${animationName} ${animationDuration} ${animationDelay} infinite linear` };
+    return { top: `${top}%`, left: `${left}%`, width: `${size}px`, height: `${size}px`, opacity, animation: `${animationName} ${animationDuration} ${animationDelay} infinite linear alternate` };
   }
-  function Hexagons() {
+  function Hexagons({ startingI, startingJ }:any) {
     const [hexagons, setHexagons] = useState<ReactElement[]>([]);
     const lastPositions = useRef([...Array(1000)].map(() => ({ x: 0, y: 0 })));
   
     useEffect(() => {
-      const newHexagons = [];
+      const newHexagons = []; 
       const lastPositionFilled = { x: 0, y: 0 };
       const lastPositionHollow = { x: 0, y: 0 };
-      for (let i = 0, j = 30; i < 20; i++, j++) {
+      for (let i = startingI, j = startingJ; i < startingI + 20; i++, j++) {
         // For filled hexagons
         lastPositions.current[i] = updateAnimation(i, lastPositionFilled, 'Filled', 'Filled');
         lastPositions.current[j] = updateAnimation(j, lastPositionHollow, 'Hollow', 'Hollow');
@@ -86,25 +86,33 @@ function updateAnimation(i:any, lastPosition:any, baseName:any, hexagonType:any)
       }
   
       setHexagons(newHexagons);
-    }, []);
+    }, [startingI, startingJ]);
   
     useEffect(() => {
-      function onAnimationIteration(e:any) {
+      function onAnimationEnd(e: any) {
         const dataIndex = e.target.dataset.index; // This will be something like 'filled-1' or 'hollow-1'
         const [type, indexStr] = dataIndex.split('-');
         const index = parseInt(indexStr, 10);
         const isHollow = type === "hollow";
         let hexagonType = isHollow ? "Hollow" : "Filled";
         const baseName = isHollow ? "Hollow" : "Filled";
-        console.log(`Animation cycle completed for ${baseName} hexagon ${index}`);
-        //console.log(`Next cycle start for ${baseName}${index}: x: ${lastPositions.current[index].x}, y: ${lastPositions.current[index].y}`);
+        console.log(`Animation completed for ${baseName} hexagon ${index}`);
       
-  
-        requestAnimationFrame(() => {
-          const newPosition = updateAnimation(index, lastPositions.current[index], baseName, hexagonType);
-          console.log(`Next cycle start for ${baseName}${index}: x: ${newPosition.x}, y: ${newPosition.y}`);
-          lastPositions.current[index] = newPosition;
-        });
+        // Update the animation parameters
+        const newPosition = updateAnimation(index, lastPositions.current[index], baseName, hexagonType);
+        console.log(`Next cycle start for ${baseName}${index}: x: ${newPosition.x}, y: ${newPosition.y}`);
+        lastPositions.current[index] = newPosition;
+      
+        // Update the animation style
+        const animationName = `floatAnimation${baseName}${index}`;
+        const animationStyle = getRandomStyle(animationName);
+      
+        // Cast the element to an HTMLElement object
+        const element = document.querySelector(`[data-index='${dataIndex}']`) as HTMLElement;
+      
+        if (element) {
+          element.style.animationName = animationName;
+        }
       }
     
      // Attach event listeners
@@ -112,7 +120,7 @@ function updateAnimation(i:any, lastPosition:any, baseName:any, hexagonType:any)
       const dataIndex = hexagon.props['data-index'];
       const element = document.querySelector(`[data-index='${dataIndex}']`);
       if (element) {
-        element.addEventListener('animationiteration', onAnimationIteration);
+        element.addEventListener('animationend', onAnimationEnd);
       }
     });
   
@@ -122,7 +130,7 @@ function updateAnimation(i:any, lastPosition:any, baseName:any, hexagonType:any)
         const dataIndex = hexagon.props['data-index'];
         const element = document.querySelector(`[data-index='${dataIndex}']`);
         if (element) {
-          element.removeEventListener('animationiteration', onAnimationIteration);
+          element.removeEventListener('animationend', onAnimationEnd);
         }
       });
     };
