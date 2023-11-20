@@ -20,13 +20,13 @@ function updateAnimation(i:any, lastPosition:any, baseName:any, hexagonType:any)
     try {
       document.styleSheets[0].insertRule(keyframes, document.styleSheets[0].cssRules.length);
     } catch (e) {
-      console.error('Error inserting keyframes:', e);
+     // console.error('Error inserting keyframes:', e);
     }
-    console.log(`Animation ${baseName}${i}: Start - x: ${lastPosition.x}, y: ${lastPosition.y}`);
-    console.log(`Animation ${baseName}${i}: End - x: ${newPoints[2].x}, y: ${newPoints[2].y}`);
+   //console.log(`Animation ${baseName}${i}: Start - x: ${lastPosition.x}, y: ${lastPosition.y}`);
+    //console.log(`Animation ${baseName}${i}: End - x: ${newPoints[2].x}, y: ${newPoints[2].y}`);
     
     // Differentiate the debug message based on hexagonType
-    console.log(`Next cycle start for ${baseName}${i}: x: ${newPoints[2].x}, y: ${newPoints[2].y} (${hexagonType} hexagon)`);
+    //console.log(`Next cycle start for ${baseName}${i}: x: ${newPoints[2].x}, y: ${newPoints[2].y} (${hexagonType} hexagon)`);
   
     return { x: newPoints[2].x, y: newPoints[2].y }; // Return new last position
   }
@@ -96,7 +96,7 @@ function updateAnimation(i:any, lastPosition:any, baseName:any, hexagonType:any)
         const isHollow = type === "hollow";
         let hexagonType = isHollow ? "Hollow" : "Filled";
         const baseName = isHollow ? "Hollow" : "Filled";
-        console.log(`Animation completed for ${baseName} hexagon ${index}`);
+       // console.log(`Animation completed for ${baseName} hexagon ${index}`);
       
         // Update the animation parameters
         const newPosition = updateAnimation(index, lastPositions.current[index], baseName, hexagonType);

@@ -11,56 +11,6 @@ gsap.registerPlugin(ScrollTrigger, ScrollToPlugin, MotionPathPlugin);
 
 const NFT = () => {
     
-    useLayoutEffect(() => {
-        // Create a timeline context
-      const mm = gsap.matchMedia();
-      mm.add(
-        {
-          xs: '(min-width: 0px) and (max-width: 479px)',
-          sm: '(min-width: 480px) and (max-width: 767px)',
-          md: '(min-width: 768px) and (max-width: 1023px)',
-          lg: '(min-width: 1024px) and (max-width: 1439px)',
-          xl: '(min-width: 1440px) and (max-width: 1919px)',
-          xxl: '(min-width: 1920px) and (max-width: 5000px)',
-        },
-        (c) => {
-          let { xs, sm, md, lg, xl, xxl } = c.conditions;
-          gsap.to("#collector", {
-            marginLeft:'-50%',
-            scrollTrigger: {
-              trigger: "#who",
-              start: "top+=2500 center",
-              end: "bottom+=4000 bottom",
-              scrub: true,
-              //markers: true,
-              id: "benefits"
-            }
-          });
-          gsap.to("#nft-wrap", {
-            width: '100%',
-            scrollTrigger: {
-              trigger: "#who",
-              start: "top+=2500 center",
-              end: "bottom+=4000 bottom",
-              scrub: true,
-              //markers: true,
-              id: "benefits"
-            }
-          });
-          gsap.to("#benefits", {
-            scrollTrigger: {
-              trigger: "#who",
-              start: "top+=2500 center",
-              end: "bottom+=4000 bottom",
-              scrub: true,
-              //markers: true,
-              id: "benefits"
-            }
-          });
-    },); // <- IMPORTANT! Scopes selector text
-        return () => mm.revert();
-      }, []); // <- empty dependency Array so it doesn't re-run on every render
-
     return (
         <>
         <section className="w-full flex min-h-full bg-[#D7D7D7] bg-opacity-100 opacity-0 absolute top-0 bottom-0 left-0 right-0 z-10" id="nft">
