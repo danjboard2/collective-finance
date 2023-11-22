@@ -32,7 +32,7 @@ function updateAnimation(i:any, lastPosition:any, baseName:any, hexagonType:any)
   }
   function getRandomStyle(animationName:any) {
     // Random size between 50px and 100px
-    const size = Math.random() * (150 - 50) + 50;
+    const size = Math.random() * (280 - 100) + 50;
   
     // Random opacity between 0.4 and 1
     const opacity = Math.random() * (0.3 - 0.2) + 0.2;
@@ -64,7 +64,7 @@ function updateAnimation(i:any, lastPosition:any, baseName:any, hexagonType:any)
       const newHexagons = []; 
       const lastPositionFilled = { x: 0, y: 0 };
       const lastPositionHollow = { x: 0, y: 0 };
-      for (let i = startingI, j = startingJ; i < startingI + 20; i++, j++) {
+      for (let i = startingI, j = startingJ; i < startingI + 25; i++, j++) {
         // For filled hexagons
         lastPositions.current[i] = updateAnimation(i, lastPositionFilled, 'Filled', 'Filled');
         lastPositions.current[j] = updateAnimation(j, lastPositionHollow, 'Hollow', 'Hollow');
