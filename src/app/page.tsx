@@ -6,6 +6,7 @@ import Hexagons from '../app/components/Hexagons'
 import Who from  '../app/components/Who'
 import NFT from  '../app/components/NFT'
 import Timeline from  '../app/components/Timeline'
+import Team from  '../app/components/Team'
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { ScrollToPlugin } from "gsap/ScrollToPlugin";
@@ -354,8 +355,9 @@ export default function Home() {
             <Who />
             <NFT />
             </section>
-            <div className="timeline"></div>
+            <div className="timeline"></div> {/* gsap trigger point - leave alone */}
             <Timeline />
+            <Team />
       </main>
       </div>
     </>

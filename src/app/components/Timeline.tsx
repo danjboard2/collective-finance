@@ -9,7 +9,7 @@ gsap.registerPlugin(ScrollTrigger);
 export default function Timeline() {
     return (
         <>
-        <section className="timeline bg-black w-full block pb-[100px]">
+        <section className="timeline bg-[#131313] w-full block pb-[100px]">
         <TimelineAnims/>
         </section>
         </>

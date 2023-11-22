@@ -138,8 +138,7 @@
   top: 32px;
 }
 .timeline-date:first-child .date span.date .date2 {
-  opacity: 1 !important;
-  background: #000;
+opacity:1 !important
 }
 .company-timeline-block .circle {
     position: absolute;
