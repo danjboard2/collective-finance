@@ -7,6 +7,7 @@ import Who from  '../app/components/Who'
 import NFT from  '../app/components/NFT'
 import Timeline from  '../app/components/Timeline'
 import Team from  '../app/components/Team'
+import Footer from  '../app/components/Footer'
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { ScrollToPlugin } from "gsap/ScrollToPlugin";
@@ -359,6 +360,7 @@ export default function Home() {
             <Timeline />
             <Team />
       </main>
+      <Footer />
       </div>
     </>
   );

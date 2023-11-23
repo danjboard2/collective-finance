@@ -15,7 +15,7 @@ const Who = () => {
     return (
         <>
         <div className="wwa-content relative sm:justify-center flex-col sm:flex-row w-full h-full flex overflow-hidden">
-        <div id="bg-layer" className="pt-[100px] h-full absolute top-0 bottom-0 left-0 right-0  overflow-hidden">
+        <div id="bg-layer" className="pt-[100px] h-full absolute top-0 bottom-0 left-0 right-0  opacity-50 overflow-hidden">
         <Hexagons startingI={40} startingJ={60} />
           </div>
            <div className="w-[95%] sm:w-2/3 md:w-1/2 flex flex-col justify-center">

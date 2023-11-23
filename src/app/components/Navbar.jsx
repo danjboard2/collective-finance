@@ -19,10 +19,6 @@ const Navbar = () => {
       id: 3,
       link: "help",
     },
-    {
-        id: 4,
-        link: "dApp",
-      }
   ];
 
   return (
@@ -51,7 +47,13 @@ const Navbar = () => {
           </li>
         ))}
       </ul>
-
+      <ul className="hidden md:flex">
+          <li
+            className="nav-links px-4 cursor-pointer font-medium text-[#EDEDED] hover:scale-105 duration-200 link-underline"
+          >
+            <Link href="#">dApp</Link>
+          </li>
+      </ul>
       <div
         onClick={() => setNav(!nav)}
         className="cursor-pointer pr-4 z-10 text-gray-500 md:hidden"
