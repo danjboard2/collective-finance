@@ -242,6 +242,30 @@ export default function Home() {
               //markers: true
             }
           });
+          gsap.to(".team-inner-left", {
+            filter: "blur(0px)",
+            autoAlpha:1,
+            scrollTrigger: {
+              trigger: "#team",
+              start: "top+=300px bottom-=100px",
+              end: "bottom-=400px bottom-=100px",
+              scrub: true,
+              //markers: true,
+              id: "quote"
+            }
+          });
+          gsap.to(".profile-photo", {
+            transform: "scale(1)",
+            scrollTrigger: {
+              trigger: "#team",
+              start: "top+=300px bottom-=100px",
+              end: "bottom-=400px bottom-=100px",
+              scrub: true,
+              //markers: true,
+              id: "quote"
+            }
+          });
+
           const blocks = gsap.utils.toArray(".company-timeline.one .company-timeline-block");
           const firstBlockIndex = 0;
           const firstBlock = blocks[firstBlockIndex]; // Accessing the first block
@@ -304,10 +328,9 @@ export default function Home() {
               }
         });
         },); // <- IMPORTANT! Scopes selector text
-    
         return () => mm.revert();
       }, []); // <- empty dependency Array so it doesn't re-run on every render
-
+      ScrollTrigger.refresh();
   useEffect(() => {
     // Check if the splash screen was already shown
     if (!cookies.splashShown) {
@@ -358,7 +381,7 @@ export default function Home() {
             </section>
             <div className="timeline"></div> {/* gsap trigger point - leave alone */}
             <Timeline />
-            <Team />
+              <Team />
       </main>
       <Footer />
       </div>

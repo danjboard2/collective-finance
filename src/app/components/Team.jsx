@@ -61,55 +61,15 @@ const Team = () => {
    const handleMemberClick = (index) => {
      setSelectedMemberIndex(index);
    };
- 
- 
-   useLayoutEffect(() => {
-     // Create a timeline context
- 
- 
-   // Create a timeline context
-   let ctx = gsap.context(() => {
- 
-     gsap.to(".team-inner-left", {
-       filter: "blur(0px)",
-       autoAlpha:1,
-       rotation: 0,
-       scrollTrigger: {
-         trigger: ".inspiration-inner",
-         start: "bottom+=450px bottom-=100px",
-         end: "bottom+=1000px bottom-=400px",
-         scrub: true,
-         //markers: true,
-         id: "quote"
-       }
-     });
-     gsap.to(".team-inner-right", {
-       filter: "blur(0px)",
-       autoAlpha:1,
-       rotation: 0,
-       scrollTrigger: {
-         trigger: ".inspiration-inner",
-         start: "bottom+=450px bottom-=100px",
-         end: "bottom+=1000px bottom-=400px",
-         scrub: true,
-         //markers: true,
-         id: "quote"
-       }
-     });
-   });
- 
-   // Revert the context when the component unmounts
-   return () => ctx.revert();
- }, []); // Empty dependency array so it runs only once on mount
 
     return (
         <>
         <section className="w-full flex min-h-full h-screen overflow-hidden relative bg-[#131313] z-10" id="team">
         <Hexagons startingI={130} startingJ={160} />
         <article className="flex flex-col w-full md:mx-[40px] xl:mx-[93px] items-center justify-center">
-            <div className="team-inner-left flex w-[85%] md:w-3/5 flex-col pt-12 pb-24">
+            <div className="team-inner-left opacity-0 flex w-[85%] md:w-3/5 flex-col pt-12 pb-24">
           <div className="member-wrap md:w-full flex flex-row items-center mb-14 md:mb-0 md:min-h-[350px] justify-center">
-            <div className="profile-photo hidden w-[250px] h-[250px] md:flex justify-center items-center border-4 border-white rounded-full mr-10  bg-white">
+            <div className="profile-photo scale-0 hidden w-[250px] h-[250px] md:flex justify-center items-center border-4 border-white rounded-full mr-10  bg-white">
             <Image
                 src={teamMembers[selectedMemberIndex]?.imageUrl}
                 alt={`Picture of ${teamMembers[selectedMemberIndex]?.name}`}
@@ -140,7 +100,7 @@ const Team = () => {
             {teamMembers.map((member, index) => (
             <div
               key={index}
-              className={`member-wrap cursor-pointer w-[20%] md:mr-[3%] xxl:max-w-[200px] mt-0 md:my-4 flex flex-col items-center ${
+              className={`member-wrap z-10 cursor-pointer w-[20%] md:mr-[3%] xxl:max-w-[200px] mt-0 md:my-4 flex flex-col items-center ${
                 selectedMemberIndex === index ? "active" : ""
               }`}
               onClick={() => handleMemberClick(index)}

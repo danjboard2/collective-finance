@@ -12,6 +12,7 @@ export default function Timeline() {
         <section className="timeline bg-[#131313] w-full block pb-[100px]">
         <TimelineAnims/>
         </section>
+        <div id="team-pin"></div>
         </>
     )
 };

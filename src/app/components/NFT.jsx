@@ -15,7 +15,6 @@ const NFT = () => {
         <>
         <section className="w-full flex min-h-full bg-[#D7D7D7] bg-opacity-100 opacity-0 absolute top-0 bottom-0 left-0 right-0 z-10" id="nft">
         <div className="opacity-40"><Hexagons startingI={100} startingJ={130} /></div>
-        <div id=""></div>
         <div className="nft-content flex-col w-full h-full flex overflow-hidden">
         <div className="header-text w-full bg-[#BBB] flex pt-[80px] relative">
           <h1 className="ml-[20px] sm:ml-[40px] md:ml-[93px] lg:ml-[93px] sm:text-[50px] md:text-[60px] lg:text-[90px] xl:text-[120px] text-black font-bold">Our NFTs</h1>
