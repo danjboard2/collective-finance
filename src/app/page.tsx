@@ -11,14 +11,12 @@ import Footer from  '../app/components/Footer'
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { ScrollToPlugin } from "gsap/ScrollToPlugin";
-import { MotionPathPlugin } from "gsap/MotionPathPlugin";
 
-gsap.registerPlugin(ScrollTrigger, ScrollToPlugin, MotionPathPlugin);
+gsap.registerPlugin(ScrollTrigger, ScrollToPlugin);
 
 export default function Home() {
   const [cookies, setCookie] = useCookies(['splashShown']);
   const [isSplashShown, setIsSplashShown] = useState(false);
-
   useLayoutEffect(() => {
 
         
@@ -50,6 +48,19 @@ export default function Home() {
                // markers: true
             }
         });
+
+        gsap.to("#team", {
+          scrollTrigger: {
+              trigger: "#team",
+              pin: "#team",
+              start: "top top",
+              end: "bottom+=2000px bottom",
+              pinSpacing:true,
+              scrub: true,
+              id: "team",
+             // markers: true
+          }
+      });
         gsap.to(".company-timeline.one .year-2021", {
           marginLeft: xs ? 20 : sm ? 40 : md ? 120 : 242,
           rotation: 0,
@@ -247,25 +258,36 @@ export default function Home() {
             autoAlpha:1,
             scrollTrigger: {
               trigger: "#team",
-              start: "top+=300px bottom-=100px",
-              end: "bottom-=400px bottom-=100px",
+              start: "top+=600px bottom-=100px",
+              end: "bottom-=200px bottom-=100px",
               scrub: true,
               //markers: true,
-              id: "quote"
+              id: "team"
             }
           });
           gsap.to(".profile-photo", {
             transform: "scale(1)",
             scrollTrigger: {
               trigger: "#team",
-              start: "top+=300px bottom-=100px",
-              end: "bottom-=400px bottom-=100px",
+              start: "top+=600px bottom-=100px",
+              end: "bottom-=200px bottom-=100px",
               scrub: true,
               //markers: true,
-              id: "quote"
+              id: "team"
             }
           });
-
+            gsap.to(".single-member", {
+              autoAlpha:1,
+              paddingTop:0,
+              scrollTrigger: {
+                trigger: "#team",
+                start: "top+=900px bottom-=100px",
+                end: "bottom+=100px bottom",
+                scrub: true,
+                //markers: true,
+                id: "team"
+              }
+          });
           const blocks = gsap.utils.toArray(".company-timeline.one .company-timeline-block");
           const firstBlockIndex = 0;
           const firstBlock = blocks[firstBlockIndex]; // Accessing the first block
@@ -329,8 +351,9 @@ export default function Home() {
         });
         },); // <- IMPORTANT! Scopes selector text
         return () => mm.revert();
-      }, []); // <- empty dependency Array so it doesn't re-run on every render
-      ScrollTrigger.refresh();
+      }, []);
+
+
   useEffect(() => {
     // Check if the splash screen was already shown
     if (!cookies.splashShown) {

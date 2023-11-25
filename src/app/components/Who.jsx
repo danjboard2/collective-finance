@@ -3,12 +3,11 @@ import React, {useLayoutEffect, useEffect,  useRef, useState} from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { ScrollToPlugin } from "gsap/ScrollToPlugin";
-import { MotionPathPlugin } from "gsap/MotionPathPlugin";
 import Hexagons from '../components/Hexagons'
 import Image from "next/image";
 import '../css/who.css'
 
-gsap.registerPlugin(ScrollTrigger, ScrollToPlugin, MotionPathPlugin);
+gsap.registerPlugin(ScrollTrigger, ScrollToPlugin);
 
 const Who = () => {
 

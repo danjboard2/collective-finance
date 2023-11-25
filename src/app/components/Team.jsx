@@ -3,7 +3,6 @@ import React, {useLayoutEffect, useEffect,  useRef, useState} from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { ScrollToPlugin } from "gsap/ScrollToPlugin";
-import { MotionPathPlugin } from "gsap/MotionPathPlugin";
 import Hexagons from './Hexagons'
 import Image from "next/image";
 
@@ -52,16 +51,13 @@ const teamMembers = [
    },
  ];
 
-gsap.registerPlugin(ScrollTrigger, ScrollToPlugin, MotionPathPlugin);
+
 
 const Team = () => {
-   
    const [selectedMemberIndex, setSelectedMemberIndex] = useState(0);
-
    const handleMemberClick = (index) => {
      setSelectedMemberIndex(index);
    };
-
     return (
         <>
         <section className="w-full flex min-h-full h-screen overflow-hidden relative bg-[#131313] z-10" id="team">
@@ -100,7 +96,7 @@ const Team = () => {
             {teamMembers.map((member, index) => (
             <div
               key={index}
-              className={`member-wrap z-10 cursor-pointer w-[20%] md:mr-[3%] xxl:max-w-[200px] mt-0 md:my-4 flex flex-col items-center ${
+              className={`member-wrap single-member pt-24 opacity-0 z-10 cursor-pointer w-[20%] md:mr-[3%] xxl:max-w-[200px] mt-0 md:my-4 flex flex-col items-center ${
                 selectedMemberIndex === index ? "active" : ""
               }`}
               onClick={() => handleMemberClick(index)}
