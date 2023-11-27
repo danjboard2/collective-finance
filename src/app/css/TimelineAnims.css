@@ -174,7 +174,7 @@ opacity:1 !important
   margin-top: 0;
 }
 .company-timeline-block p {
-  line-height: 1.75;
+  line-height: 1.75rem;
 }
 .company-timeline-list .timeline-date .date2.finished  {opacity:0 !important;}
 .company-timeline-list .timeline-date .date2 {opacity:0;margin-left: 12px;}

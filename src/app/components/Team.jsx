@@ -63,7 +63,7 @@ const Team = () => {
         <section className="w-full flex min-h-full h-screen overflow-hidden relative bg-[#131313] z-10" id="team">
         <Hexagons startingI={130} startingJ={160} />
         <article className="flex flex-col w-full md:mx-[40px] xl:mx-[93px] items-center justify-center">
-            <div className="team-inner-left opacity-0 flex w-[85%] md:w-3/5 flex-col pt-12 pb-24">
+            <div className="team-inner-left opacity-0 flex w-full xl:w-[85%] flex-col pt-12 pb-24">
           <div className="member-wrap md:w-full flex flex-row items-center mb-14 md:mb-0 md:min-h-[350px] justify-center">
             <div className="profile-photo scale-0 hidden w-[250px] h-[250px] md:flex justify-center items-center border-4 border-white rounded-full mr-10  bg-white">
             <Image
@@ -90,13 +90,13 @@ const Team = () => {
           </div>
           </div>
           </div>  
-          <div className="team-inner-right flex w-11/12 flex-wrap justify-around md:justify-end xl:justify-around">
+          <div className="team-inner-right flex w-11/12 flex-wrap justify-evenly xl:justify-around">
 
             {/* team member */}
             {teamMembers.map((member, index) => (
             <div
               key={index}
-              className={`member-wrap single-member pt-24 opacity-0 z-10 cursor-pointer w-[20%] md:mr-[3%] xxl:max-w-[200px] mt-0 md:my-4 flex flex-col items-center ${
+              className={`member-wrap single-member pt-24 opacity-50 z-10 cursor-pointer w-[20%] md:mr-[3%] xxl:max-w-[200px] mt-0 md:my-4 flex flex-col items-center ${
                 selectedMemberIndex === index ? "active" : ""
               }`}
               onClick={() => handleMemberClick(index)}
