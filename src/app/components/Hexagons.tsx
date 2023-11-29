@@ -64,7 +64,7 @@ function updateAnimation(i:any, lastPosition:any, baseName:any, hexagonType:any)
       const newHexagons = []; 
       const lastPositionFilled = { x: 0, y: 0 };
       const lastPositionHollow = { x: 0, y: 0 };
-      for (let i = startingI, j = startingJ; i < startingI + 25; i++, j++) {
+      for (let i = startingI, j = startingJ; i < startingI + 18; i++, j++) {
         // For filled hexagons
         lastPositions.current[i] = updateAnimation(i, lastPositionFilled, 'Filled', 'Filled');
         lastPositions.current[j] = updateAnimation(j, lastPositionHollow, 'Hollow', 'Hollow');
