@@ -197,7 +197,7 @@ export default function Home() {
             }
           });
           gsap.to("#collector", {
-            marginLeft:'-50%',
+            marginLeft: xs ? '-66.66666%' : sm ? '-66.66666%' :'-50%',
             scrollTrigger: {
               trigger: ".pin2",
               start: "top+=2900 center",
