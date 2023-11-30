@@ -64,7 +64,7 @@ const Team = () => {
         <Hexagons startingI={130} startingJ={160} />
         <article className="flex flex-col w-full lg:mx-[40px] xl:mx-[93px] items-center justify-center">
             <div className="team-inner-left opacity-0 flex w-full xl:w-[85%] flex-col pt-12 pb-24 px-8 lg:px-0">
-          <div className="member-wrap md:w-full flex flex-row items-center mb-14 md:mb-0 md:min-h-[350px] justify-center">
+          <div className="member-wrap md:w-full flex flex-row items-center mb-6 md:mb-0 md:min-h-[350px] justify-center">
             <div className="profile-photo scale-0 hidden w-[250px] h-[250px] md:flex justify-center items-center border-4 border-white rounded-full mr-10  bg-white">
             <Image
                 src={teamMembers[selectedMemberIndex]?.imageUrl}
@@ -101,7 +101,7 @@ const Team = () => {
               }`}
               onClick={() => handleMemberClick(index)}
             >
-              <div className="member-thumb border-4 border-white rounded-full mb-2 bg-white w-[150px] h-[150px]">
+              <div className="member-thumb border-4 border-white rounded-full mb-2 bg-white sm:w-[100px] sm:h-[100px] md:w-[150px]  md:h-[150px]">
                 <Image
                   src={member.imageUrl}
                   alt={`Picture of ${member.name}`}
@@ -110,7 +110,7 @@ const Team = () => {
                   className="-mt-10 pb-4 w-full"
                 />
               </div>
-              <div className="member-details flex flex-row justify-between pb-8 items-center">
+              <div className="member-details flex flex-col-reverse md:flex-row justify-between pb-8 items-center mb-4 md:mb-0">
                 <div className="names-small">
                   <h3 className="text-base font-bold text-white">
                     {member.name}

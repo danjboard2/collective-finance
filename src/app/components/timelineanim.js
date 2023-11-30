@@ -15,7 +15,7 @@ export default function TimelineAnims() {
           <div className="contain">
             <div className="company-timeline-wrapper">
             <div className="timeline-heading overflow-x-clip">
-                  <h2 className="year-2021 md:text-[80px] lg:text-[100px] xl:text-[180px] xxl:text-[220px] leading-[1] ml-[1000px] text-white  -mb-[450px] font-extrabold whitespace-nowrap">2023 Roadmap</h2>
+                  <h2 className="year-2021 sm:text-[50px] md:text-[80px] lg:text-[100px] xl:text-[180px] xxl:text-[220px] leading-[1] ml-[1000px] text-white  -mb-[450px] font-extrabold whitespace-nowrap">2023 Roadmap</h2>
                  </div>
               <div className="company-timeline-list">
             <div className="company-timeline-year">

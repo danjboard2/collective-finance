@@ -62,7 +62,7 @@ export default function Home() {
           }
       });
         gsap.to(".company-timeline.one .year-2021", {
-          marginLeft: xs ? 20 : sm ? 40 : md ? 120 : lg ? 220 : 240,
+          marginLeft: xs ? 20 : sm ? 80 : md ? 120 : lg ? 220 : 240,
           rotation: 0,
           scrollTrigger: {
             trigger: "#company-timeline",
@@ -74,7 +74,7 @@ export default function Home() {
           }
         });
           gsap.to(".box.a", {
-            marginLeft: xs ? 20 : sm ? 40 : 93,
+            marginLeft: xs ? 20 : sm ? 20 : 93,
             rotation: 0,
             filter: "blur(0px)",
             scrollTrigger: {
@@ -89,7 +89,7 @@ export default function Home() {
           gsap.to(".assured", {
             marginTop: 0,
             opacity:1,
-            bottom: '12rem',
+            bottom: xs ? '1rem' : sm ? '1rem' : '12rem',
             filter: "blur(0px)",
             scrollTrigger: {
               trigger: ".box.a",
@@ -380,15 +380,15 @@ export default function Home() {
             <Hexagons startingI={0} startingJ={30} />
           </div>
           <div className="flex flex-row w-full min-h-full h-screen">
-            <div className="w-[40%] bg-black bg-opacity-50 h-full flex justify-center flex-col relative z-10 pl-6 xl:pl-28 md:min-w-[400px] lg:min-w-[500px] xl:min-w-[720px]">
-                <h1 id="gold" className="text-white font-bold sm:text-[50px] md:text-[80px] lg:text-[90px] xl:text-[120px] mb-0">Gold</h1>
-                <h1 id="silver"className="text-white font-bold sm:text-[50px] md:text-[80px] lg:text-[90px] xl:text-[120px]  -mt-[50px] mb-0">Silver</h1>
-                <h1 id="diamond" className="text-white font-bold sm:text-[50px] md:text-[80px] lg:text-[90px] xl:text-[120px] -mt-[50px] mb-0">Diamond</h1>
-                <h2 className="text-white font-light md:text-2xl lg:text-3xl xl:text-[45px] max-w-[550px] leading-tight mt-0">Earn passive yield on the commodities asset class</h2>
-                <button className="text-white hover:text-black hover:bg-white duration-300 flex items-center border-2 md:text-2xl xl:text-3xl mt-20 py-1 justify-around w-[300px] px-6"><Image className="hover:spin-anim" src="/media/images/collective-finance-logo.png" alt="Collective Finance" height={40} width={40}/> Open dApp</button>
+            <div className="w-[40%] bg-black bg-opacity-50 h-full flex justify-center flex-col relative z-10 pl-6 xl:pl-28 sm:min-w-[280px] md:min-w-[400px] lg:min-w-[500px] xl:min-w-[720px]">
+                <h1 id="gold" className="text-white font-bold md:pt-0 sm:text-[55px] md:text-[80px] lg:text-[90px] xl:text-[120px] mb-0">Gold</h1>
+                <h1 id="silver"className="text-white font-bold sm:pt-4 md:pt-0 sm:text-[55px] md:text-[80px] lg:text-[90px] xl:text-[120px]  -mt-[50px] mb-0">Silver</h1>
+                <h1 id="diamond" className="text-white font-bold sm:pt-4 md:pt-0 sm:text-[55px] md:text-[80px] lg:text-[90px] xl:text-[120px] -mt-[50px] mb-0">Diamond</h1>
+                <h2 className="text-white font-light sm:text-xl md:text-2xl lg:text-3xl xl:text-[45px] max-w-[550px] leading-tight xl:!leading-[3.25rem] mt-0">Earn passive yield on the commodities asset class</h2>
+                <button className="text-white hover:text-black hover:bg-white duration-300 flex items-center border-2 md:text-2xl xl:text-3xl mt-20 py-1 justify-around sm:w-[230px] md:w-[300px] px-6"><Image className="hover:spin-anim" src="/media/images/collective-finance-logo.png" alt="Collective Finance" height={40} width={40}/> Open dApp</button>
             </div>
             <div className="w-[60%] flex flex-row justify-center items-center relative z-10 overflow-hidden">
-              <Image className="ml-[60%] max-h-none md:max-w-[150%] lg:max-w-[160%] xl:max-w-[160%] 2xl:max-w-[140%]" src="/media/images/collective-finance-logo.png" loading="eager" alt="Collective Finance" height={1600} width={1600}></Image>
+              <Image className="ml-[60%] max-h-none max-w-[150%] md:max-w-[150%] lg:max-w-[160%] xl:max-w-[160%] 2xl:max-w-[140%]" src="/media/images/collective-finance-logo.png" loading="eager" alt="Collective Finance" height={1600} width={1600}></Image>
             </div>
           </div>
           </section>

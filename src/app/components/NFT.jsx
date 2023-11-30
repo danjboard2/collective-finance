@@ -20,12 +20,12 @@ const NFT = () => {
           </div>
           <div className="w-[150%] content-wrap flex flex-row h-full" id="nft-wrap">
            <div className="w-[50%] flex flex-col justify-center relative" id="collector">
-              <h2 className="ml-[20px] sm:ml-[40px] md:ml-[93px] lg:ml-[140px] mb-10 text-5xl xl:text-[44px] text-black font-bold">Why become a Collector?</h2>
+              <h2 className="ml-[20px] sm:ml-[40px] md:ml-[93px] lg:ml-[140px] mb-10 text-3xl md:text-5xl xl:text-[44px] text-black font-bold">Why become a Collector?</h2>
               <p className="wwa-text ml-[20px] sm:ml-[40px] md:ml-[93px] lg:ml-[140px] lg:w-4/5 sm:text-base lg:text-xl xl:text-2xl font-bold text-black z-1 relative pb-4 sm:pb-16">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.<br/><br/>Venenatis lectus magna fringilla urna porttitor rhoncus dolor purus. Netus et malesuada fames ac. Imperdiet massa tincidunt nunc pulvinar sapien et ligula. Iaculis at erat pellentesque adipiscing commodo elit at. Arcu felis bibendum ut tristique et egestas quis ipsum.</p>
            </div>
            <div className="w-full sm:w-1/3 md:w-1/2 flex flex-col relative justify-center xl:justify-end items-center">
            <Image className="opacity-100 hidden xl:block" src="/media/images/phone-1.png" alt="Collective Finance Phone" loading="eager" height={800} width={800}></Image>
-           <Image className="opacity-100 block xl:hidden px-20" src="/media/images/phone-mobile.png" alt="Collective Finance Phone" loading="eager" height={800} width={800}></Image>
+           <Image className="opacity-100 block xl:hidden md:px-20" src="/media/images/phone-mobile.png" alt="Collective Finance Phone" loading="eager" height={800} width={800}></Image>
             </div>
             <div className="w-[50%] h-full overflow:hidden flex flex-col justify-center relative" id="benefits">
               <h2 className="ml-[20px] sm:ml-[40px] lg:ml-[40px] mb-10 text-5xl xl:text-[44px] text-black font-bold">NFT Benefits</h2>

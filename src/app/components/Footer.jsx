@@ -6,7 +6,7 @@ import Image from "next/image";
 const Footer = () => {
 
   return (
-    <div className="flex justify-between items-center w-full h-full px-4 py-10 text-[#EDEDED] bg-[#131313] min-h-[260px]">
+    <div className="flex flex-col md:flex-row justify-between items-center w-full h-full px-4 py-10 text-[#EDEDED] bg-[#131313] min-h-[260px]">
       <div className="lg:ml-20 justify-between flex flex-col self-stretch">
         {/* <h1 className="text-5xl font-signature ml-2"><a className="link-underline hover:transition ease-in-out delay-150 hover:underline hover:decoration-solid" href="">Logo</a></h1> */}
           <a
