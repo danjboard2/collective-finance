@@ -169,7 +169,7 @@ export default function Home() {
             }
           });
         }
-          
+        if (window.innerWidth >= 479) {
           gsap.to(".svghex", {
             width:'4500px',
             height:'4500px',
@@ -185,6 +185,7 @@ export default function Home() {
               id: "Spinning Logo"
             }
           });
+        }
 
           gsap.to(".spinning-logo", {
             opacity:'0',
