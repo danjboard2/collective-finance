@@ -55,6 +55,7 @@ export default function Home() {
           // other animation properties here
         });
         
+        if (window.innerWidth >= 479) {
         // Create a reverse animation
         const reverseTimeline = gsap.timeline();
         reverseTimeline.to("#nft", {
@@ -79,6 +80,7 @@ export default function Home() {
             invalidateOnRefresh: true
           }
         });
+      }
             if (window.innerWidth >= 479) {
             gsap.to("#team", {
               scrollTrigger: {
