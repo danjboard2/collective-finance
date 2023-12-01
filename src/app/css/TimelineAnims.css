@@ -210,7 +210,7 @@ opacity:1 !important
 }
 @media screen and (max-width: 479px){ /* only on small devices and below */
 .company-timeline-slider {
-  margin-left: 20px;
+  margin-left: 5px;
 }
 .company-timeline-list .timeline-date {
   left: -45px;

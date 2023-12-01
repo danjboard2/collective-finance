@@ -48,7 +48,7 @@ export default function Home() {
                // markers: true
             }
         });
-
+        if (window.innerWidth >= 479) {
         gsap.to("#team", {
           scrollTrigger: {
               trigger: "#team",
@@ -61,8 +61,9 @@ export default function Home() {
              // markers: true
           }
       });
+    }
         gsap.to(".company-timeline.one .year-2021", {
-          marginLeft: xs ? 20 : sm ? 80 : md ? 120 : lg ? 220 : 240,
+          marginLeft: xs ? 55 : sm ? 80 : md ? 120 : lg ? 220 : 240,
           rotation: 0,
           scrollTrigger: {
             trigger: "#company-timeline",
@@ -152,7 +153,7 @@ export default function Home() {
               id: "Spinning Logo"
             }
           });
-
+          if (window.innerWidth >= 479) {
           gsap.to(".spinning-logo", {
             height:'9000px',
             width:'8000px',
@@ -167,7 +168,7 @@ export default function Home() {
               id: "Spinning Logo"
             }
           });
-
+        }
           
           gsap.to(".svghex", {
             width:'4500px',
@@ -253,6 +254,7 @@ export default function Home() {
               //markers: true
             }
           });
+          if (window.innerWidth >= 479) {
           gsap.to(".team-inner-left", {
             filter: "blur(0px)",
             autoAlpha:1,
@@ -265,6 +267,8 @@ export default function Home() {
               id: "team"
             }
           });
+        }
+        if (window.innerWidth >= 479) {
           gsap.to(".profile-photo", {
             transform: "scale(1)",
             scrollTrigger: {
@@ -276,6 +280,8 @@ export default function Home() {
               id: "team"
             }
           });
+        }
+        if (window.innerWidth >= 479) {
             gsap.to(".single-member", {
               autoAlpha:1,
               paddingTop:0,
@@ -288,6 +294,7 @@ export default function Home() {
                 id: "team"
               }
           });
+        }
           const blocks = gsap.utils.toArray(".company-timeline.one .company-timeline-block");
           const firstBlockIndex = 0;
           const firstBlock = blocks[firstBlockIndex]; // Accessing the first block
@@ -380,12 +387,12 @@ export default function Home() {
             <Hexagons startingI={0} startingJ={30} />
           </div>
           <div className="flex flex-row w-full min-h-full h-screen">
-            <div className="w-[40%] bg-black bg-opacity-50 h-full flex justify-center flex-col relative z-10 pl-6 xl:pl-28 sm:min-w-[280px] md:min-w-[400px] lg:min-w-[500px] xl:min-w-[720px]">
-                <h1 id="gold" className="text-white font-bold md:pt-0 sm:text-[55px] md:text-[80px] lg:text-[90px] xl:text-[120px] mb-0">Gold</h1>
-                <h1 id="silver"className="text-white font-bold sm:pt-4 md:pt-0 sm:text-[55px] md:text-[80px] lg:text-[90px] xl:text-[120px]  -mt-[50px] mb-0">Silver</h1>
-                <h1 id="diamond" className="text-white font-bold sm:pt-4 md:pt-0 sm:text-[55px] md:text-[80px] lg:text-[90px] xl:text-[120px] -mt-[50px] mb-0">Diamond</h1>
-                <h2 className="text-white font-light sm:text-xl md:text-2xl lg:text-3xl xl:text-[45px] max-w-[550px] leading-tight xl:!leading-[3.25rem] mt-0">Earn passive yield on the commodities asset class</h2>
-                <button className="text-white hover:text-black hover:bg-white duration-300 flex items-center border-2 md:text-2xl xl:text-3xl mt-20 py-1 justify-around sm:w-[230px] md:w-[300px] px-6"><Image className="hover:spin-anim" src="/media/images/collective-finance-logo.png" alt="Collective Finance" height={40} width={40}/> Open dApp</button>
+            <div className="w-[40%] bg-black xs:bg-opacity-0 sm:bg-opacity-50 h-full flex justify-center flex-col relative z-10 pl-6 xl:pl-28 xs:min-w-full sm:min-w-[280px] md:min-w-[400px] lg:min-w-[500px] xl:min-w-[720px]">
+                <h1 id="gold" className="text-white font-bold md:pt-0 xs:text-[55px] sm:text-[55px] md:text-[80px] lg:text-[90px] xl:text-[120px] mb-0">Gold</h1>
+                <h1 id="silver"className="text-white font-bold xs:pt-4 md:pt-0 xs:text-[55px] sm:text-[55px] md:text-[80px] lg:text-[90px] xl:text-[120px]  -mt-[50px] mb-0">Silver</h1>
+                <h1 id="diamond" className="text-white font-bold xs:pt-4 md:pt-0 xs:text-[55px] sm:text-[55px] md:text-[80px] lg:text-[90px] xl:text-[120px] -mt-[50px] mb-0">Diamond</h1>
+                <h2 className="text-white font-light xs:text-xl md:text-2xl lg:text-3xl xl:text-[45px] max-w-[550px] leading-tight xl:!leading-[3.25rem] mt-0 xs:pr-4 sm:pr-0">Earn passive yield on the commodities asset class</h2>
+                <button className="text-white hover:text-black xs:text-base hover:bg-white duration-300 flex items-center border-2 md:text-2xl xl:text-3xl mt-20 py-1 justify-around xs:w-[200px] sm:w-[230px] md:w-[300px] px-6"><Image className="hover:spin-anim" src="/media/images/collective-finance-logo.png" alt="Collective Finance" height={40} width={40}/> Open dApp</button>
             </div>
             <div className="w-[60%] flex flex-row justify-center items-center relative z-10 overflow-hidden">
               <Image className="ml-[60%] max-h-none max-w-[150%] md:max-w-[150%] lg:max-w-[160%] xl:max-w-[160%] 2xl:max-w-[140%]" src="/media/images/collective-finance-logo.png" loading="eager" alt="Collective Finance" height={1600} width={1600}></Image>

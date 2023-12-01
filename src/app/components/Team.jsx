@@ -60,12 +60,12 @@ const Team = () => {
    };
     return (
         <>
-        <section className="w-full flex min-h-full h-screen overflow-hidden relative bg-[#131313] z-10" id="team">
+        <section className="w-full flex min-h-full sm:min-h-screen overflow-hidden relative bg-[#131313] z-10" id="team">
         <Hexagons startingI={130} startingJ={160} />
-        <article className="flex flex-col w-full lg:mx-[40px] xl:mx-[93px] items-center justify-center">
-            <div className="team-inner-left opacity-0 flex w-full xl:w-[85%] flex-col pt-12 pb-24 px-8 lg:px-0">
-          <div className="member-wrap md:w-full flex flex-row items-center mb-6 md:mb-0 md:min-h-[350px] justify-center">
-            <div className="profile-photo scale-0 hidden w-[250px] h-[250px] md:flex justify-center items-center border-4 border-white rounded-full mr-10  bg-white">
+        <article className="flex flex-col w-full lg:mx-[40px] xl:mx-[93px] items-center sm:justify-center relative">
+            <div className="team-inner-left xs:opacity-100 sm:opacity-0 flex w-full xl:w-[85%] flex-col pt-12 sm:pb-14 px-8 lg:px-0">
+          <div className="member-wrap md:w-full flex flex-col sm:flex-row items-center mb-6 md:mb-0 md:min-h-[350px] justify-center">
+            <div className="profile-photo  xs:scale-50 sm:scale-0 sm:hidden w-[250px] h-[250px] md:flex justify-center items-center border-4 border-white rounded-full mr-10  bg-white">
             <Image
                 src={teamMembers[selectedMemberIndex]?.imageUrl}
                 alt={`Picture of ${teamMembers[selectedMemberIndex]?.name}`}
@@ -74,8 +74,8 @@ const Team = () => {
                 className="-mt-10 pb-4 max-w-full"
               />
             </div>
-            <div className="member-info md:w-3/5">
-              <div className="member-names flex flex-row pb-8 items-center">
+            <div className="member-info xs:-mt-10 sm:mt-0 md:w-3/5">
+              <div className="member-names flex flex-row xs:pb-2 sm:pb-8 items-center">
                 <div className="names mr-10">
                   <h3 className="text-xl sm:text-2xl md:text-3xl font-bold text-white"> {teamMembers[selectedMemberIndex]?.name}</h3>
                   <h4 className="text-xl sm:text-2xl md:text-3xl font-bold text-white">{teamMembers[selectedMemberIndex]?.jobTitle}</h4>
@@ -84,7 +84,7 @@ const Team = () => {
                   <a href={teamMembers[selectedMemberIndex]?.linkedinURL}><Image src="/media/images/linkedin.svg" width={60} height={60} alt="LinkedIn" className="max-w-[25px] sm:max-w-[0px] sm:min-w-[30px]"/></a>
                 </div>
               </div>
-              <div className="member-desc md:text-base xl:text-xl text-white">
+              <div className="member-desc md:text-base xs:text-sm sm:text-xl text-white">
                 <p className="min-h-[130px]">{teamMembers[selectedMemberIndex]?.bio}</p>
                 </div>
           </div>
@@ -96,7 +96,7 @@ const Team = () => {
             {teamMembers.map((member, index) => (
             <div
               key={index}
-              className={`member-wrap single-member pt-24 opacity-50 z-10 cursor-pointer w-1/3 lg:w-[20%] lg:mr-[3%] xxl:max-w-[200px] mt-0 md:my-4 flex flex-col items-center ${
+              className={`member-wrap single-member xs:pt-14 sm:pt-24 opacity-100 sm:opacity-50 z-10 cursor-pointer xs:w-[30%] sm:w-1/3 lg:w-[20%] lg:mr-[3%] xxl:max-w-[200px] mt-0 md:my-4 flex flex-col items-center ${
                 selectedMemberIndex === index ? "active" : ""
               }`}
               onClick={() => handleMemberClick(index)}
@@ -110,7 +110,7 @@ const Team = () => {
                   className="-mt-10 pb-4 w-full"
                 />
               </div>
-              <div className="member-details flex flex-col-reverse md:flex-row justify-between pb-8 items-center mb-4 md:mb-0">
+              <div className="member-details flex flex-col-reverse md:flex-row justify-between sm:pb-8 items-center sm:mb-4 md:mb-0">
                 <div className="names-small">
                   <h3 className="text-base font-bold text-white">
                     {member.name}
