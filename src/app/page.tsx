@@ -44,7 +44,7 @@ export default function Home() {
                 pinSpacing:true,
                 scrub: true,
                 id: "Who",
-                markers: true,
+                //markers: true,
                toggleActions: "play reverse play reverse", // This line controls the reverse behavior
                invalidateOnRefresh: true
             }
@@ -55,7 +55,6 @@ export default function Home() {
           // other animation properties here
         });
         
-        if (window.innerWidth >= 479) {
         // Create a reverse animation
         const reverseTimeline = gsap.timeline();
         reverseTimeline.to("#nft", {
@@ -75,12 +74,11 @@ export default function Home() {
             id: "PIN2",
             onEnter: () => nftTimeline.play(), // Play the animation when entering
             onLeaveBack: () => reverseTimeline.play(), // Play the reverse animation when leaving back
-            markers: true,
+           // markers: true,
             toggleActions: "play reverse play reverse", // This line controls the reverse behavior
             invalidateOnRefresh: true
           }
         });
-      }
             if (window.innerWidth >= 479) {
             gsap.to("#team", {
               scrollTrigger: {
@@ -117,7 +115,7 @@ export default function Home() {
               start: "top bottom-=100px",
               end: "bottom+=100px bottom-=500px",
               scrub: true,
-              markers: true,
+              //markers: true,
               id: "Who-first"
             }
           });
@@ -251,7 +249,7 @@ export default function Home() {
               start: "top+=2900px center",
               end: "bottom+=3600px bottom",
               scrub: true,
-              markers: true,
+              //markers: true,
               id: "benefits",
               toggleActions: "play reverse play reverse", // This line controls the reverse behavior
             }
