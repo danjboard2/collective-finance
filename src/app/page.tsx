@@ -337,8 +337,6 @@ export default function Home() {
                     console.log(`Play animation for index ${index}`);
                     // Hide the circle element when the animation is complete
                   },
-                  onReverseComplete: () => {
-                  },
                   scrollTrigger: {
                     trigger: block as gsap.DOMTarget,
                     start: "top 51.8%",
