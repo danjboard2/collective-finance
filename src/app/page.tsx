@@ -10,9 +10,8 @@ import Team from  '../app/components/Team'
 import Footer from  '../app/components/Footer'
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import { ScrollToPlugin } from "gsap/ScrollToPlugin";
 
-gsap.registerPlugin(ScrollTrigger, ScrollToPlugin);
+gsap.registerPlugin(ScrollTrigger);
 
 export default function Home() {
   const [cookies, setCookie] = useCookies(['splashShown']);
@@ -35,20 +34,6 @@ export default function Home() {
           let { xs, sm, md, lg, xl, xxl }:any = c.conditions;
 
             // Create a timeline context
-          gsap.to("#who", {
-            scrollTrigger: {
-                trigger: "#who",
-                pin: "#who",
-                start: "top top",
-                end: "bottom+=5000px bottom",
-                pinSpacing:true,
-                scrub: true,
-                id: "Who",
-                //markers: true,
-               toggleActions: "play reverse play reverse", // This line controls the reverse behavior
-               invalidateOnRefresh: true
-            }
-        });
         const nftTimeline = gsap.timeline();
         nftTimeline.to("#nft", {
           opacity: 1,
@@ -58,9 +43,9 @@ export default function Home() {
         // Create a reverse animation
         const reverseTimeline = gsap.timeline();
         reverseTimeline.to("#nft", {
-          opacity: 1, // Start at opacity: 1
+          opacity: 0, // Start at opacity: 1
           // other animation properties here
-          reversed: true, // Initially, the timeline is reversed
+          reversed:false, // Initially, the timeline is reversed
         });
         gsap.to("#nft", {
           opacity:1,
@@ -79,21 +64,6 @@ export default function Home() {
             invalidateOnRefresh: true
           }
         });
-            if (window.innerWidth >= 479) {
-            gsap.to("#team", {
-              scrollTrigger: {
-                  trigger: "#team",
-                  pin: "#team",
-                  start: "top top",
-                  end: "bottom+=2000px bottom",
-                  pinSpacing:true,
-                  scrub: true,
-                  id: "team",
-                  invalidateOnRefresh: true
-                // markers: true
-              }
-          });
-        }
         gsap.to(".company-timeline.one .year-2021", {
           marginLeft: xs ? 55 : sm ? 80 : md ? 120 : lg ? 220 : 240,
           rotation: 0,
@@ -115,8 +85,8 @@ export default function Home() {
               start: "top bottom-=100px",
               end: "bottom+=100px bottom-=500px",
               scrub: true,
-              //markers: true,
-              id: "Who-first"
+              markers: true,
+              id: "Who-first",
             }
           });
           gsap.to(".assured", {
@@ -130,7 +100,7 @@ export default function Home() {
               end: "bottom+=500px bottom-=900px",
               scrub: true,
              // markers: true,
-              id: "assured"
+              id: "assured",
             }
           });
 
@@ -144,7 +114,7 @@ export default function Home() {
               end: "bottom+=100px bottom-=600px",
               scrub: true,
               //markers: true,
-              id: "We"
+              id: "We",
             }
           });
     
@@ -170,7 +140,7 @@ export default function Home() {
               end: "bottom+=100px bottom-=700px",
               scrub: true,
               //markers: true,
-              id: "Spin Container"
+              id: "Spin Container",
             }
           });
           gsap.to(".spinning-logo", {
@@ -182,7 +152,7 @@ export default function Home() {
               end: "bottom+=100px bottom-=700px",
               scrub: true,
               //markers: true,
-              id: "Spinning Logo"
+              id: "Spinning Logo",
             }
           });
           if (window.innerWidth >= 479) {
@@ -197,9 +167,38 @@ export default function Home() {
               end: "bottom+=100px bottom-=2500px",
               scrub: true,
               //markers: true,
-              id: "Spinning Logo"
+              id: "Spinning Logo",
             }
           });
+          gsap.to("#who", {
+            scrollTrigger: {
+                trigger: "#who",
+                pin: "#who",
+                start: "top top",
+                end: "bottom+=5000px bottom",
+                pinSpacing:"true",
+                scrub: true,
+                id: "Who",
+                markers: true,
+               toggleActions: "play reverse play reverse", // This line controls the reverse behavior
+               invalidateOnRefresh: true
+            }
+        });
+        if (window.innerWidth >= 479) {
+          gsap.to("#team", {
+            scrollTrigger: {
+                trigger: "#team",
+                pin: "#team",
+                start: "top top",
+                end: "bottom+=2000px bottom",
+                pinSpacing:true,
+                scrub: true,
+                id: "team",
+                invalidateOnRefresh: true
+              // markers: true
+            }
+        });
+      }
         }
         if (window.innerWidth >= 479) {
           gsap.to(".svghex", {
@@ -214,7 +213,8 @@ export default function Home() {
               end: "bottom+=100px bottom-=2500px",
               scrub: true,
               //markers: true,
-              id: "Spinning Logo"
+              id: "Spinning Logo",
+              invalidateOnRefresh: true
             }
           });
         }
@@ -227,7 +227,8 @@ export default function Home() {
               end: "bottom+=100px bottom-=2500px",
               scrub: true,
               //markers: true,
-              id: "Spinning Logo"
+              id: "Spinning Logo",
+              invalidateOnRefresh: true
             }
           });
           gsap.to("#collector", {
@@ -240,6 +241,7 @@ export default function Home() {
               //markers: true,
               id: "benefits",
               toggleActions: "play reverse play reverse", // This line controls the reverse behavior
+              invalidateOnRefresh: true
             }
           });
           gsap.to("#nft-wrap", {
@@ -252,6 +254,7 @@ export default function Home() {
               //markers: true,
               id: "benefits",
               toggleActions: "play reverse play reverse", // This line controls the reverse behavior
+              invalidateOnRefresh: true
             }
           });
           gsap.to("#benefits", {
@@ -410,6 +413,7 @@ export default function Home() {
           </section>
           <section className="w-full flex min-h-full h-screen bg-black bg-opacity-50 overflow-hidden z-10" id="who">
             <Who />
+            <div className="pin2"></div>
             <NFT />
             </section>
             <div className="timeline"></div> {/* gsap trigger point - leave alone */}

@@ -35,7 +35,6 @@ const Who = () => {
             </div>
             <Image className="assured -z-[1] absolute opacity-0 bottom-0 right-32 blur-lg xs:right-6 w-[150px] md:w-[250px]" src="/media/images/assured-logo.png" alt="Assured" loading="eager" height={250} width={250}></Image>
          </div>
-         <div className="pin2"></div>
          </>
     )
 }
