@@ -33,37 +33,6 @@ export default function Home() {
         (c) => {
           let { xs, sm, md, lg, xl, xxl }:any = c.conditions;
 
-            // Create a timeline context
-        const nftTimeline = gsap.timeline();
-        nftTimeline.to("#nft", {
-          opacity: 1,
-          // other animation properties here
-        });
-        
-        // Create a reverse animation
-        const reverseTimeline = gsap.timeline();
-        reverseTimeline.to("#nft", {
-          opacity: 0, // Start at opacity: 1
-          // other animation properties here
-          reversed:false, // Initially, the timeline is reversed
-        });
-        gsap.to("#nft", {
-          opacity:1,
-          scrollTrigger: {
-            trigger: ".pin2",
-            pin: true,
-            start: "top+=2500px bottom",
-            end: "top+=3500px bottom",
-            scrub: true,
-            pinSpacing: true,
-            id: "PIN2",
-            onEnter: () => nftTimeline.play(), // Play the animation when entering
-            onLeaveBack: () => reverseTimeline.play(), // Play the reverse animation when leaving back
-           // markers: true,
-            toggleActions: "play reverse play reverse", // This line controls the reverse behavior
-            invalidateOnRefresh: true
-          }
-        });
           gsap.to(".box.a", {
             marginLeft: xs ? 20 : sm ? 20 : 93,
             rotation: 0,
@@ -73,7 +42,7 @@ export default function Home() {
               start: "top bottom-=100px",
               end: "bottom+=100px bottom-=500px",
               scrub: true,
-              markers: true,
+              //markers: true,
               id: "Who-first",
             }
           });
@@ -192,7 +161,36 @@ export default function Home() {
               toggleActions: "play reverse play reverse"
             }
           });
-
+            // Create a timeline context
+            const nftTimeline = gsap.timeline();
+            nftTimeline.to("#nft", {
+              opacity: 1,
+              // other animation properties here
+            });
+            
+            // Create a reverse animation
+            const reverseTimeline = gsap.timeline();
+            reverseTimeline.to("#nft", {
+              opacity: 0, // Start at opacity: 1
+              // other animation properties here
+              reversed:false, // Initially, the timeline is reversed
+            });
+            gsap.to("#nft", {
+              opacity:1,
+              scrollTrigger: {
+                trigger: ".pin2",
+                pin: true,
+                start: "top+=2500px bottom",
+                end: "top+=3500px bottom",
+                scrub: true,
+                pinSpacing: true,
+                id: "PIN2",
+                onEnter: () => nftTimeline.play(), // Play the animation when entering
+                onLeaveBack: () => reverseTimeline.play(), // Play the reverse animation when leaving back
+               // markers: true,
+                toggleActions: "play reverse play reverse", // This line controls the reverse behavior
+              }
+            });
           gsap.to("#who", {
             scrollTrigger: {
                 trigger: "#who",
@@ -202,9 +200,9 @@ export default function Home() {
                 pinSpacing:"true",
                 scrub: true,
                 id: "Who",
-                markers: true,
+                //markers: true,
                toggleActions: "play reverse play reverse", // This line controls the reverse behavior
-               invalidateOnRefresh: true
+
             }
         });
         if (window.innerWidth >= 479) {
@@ -217,7 +215,7 @@ export default function Home() {
                 pinSpacing:true,
                 scrub: true,
                 id: "team",
-                invalidateOnRefresh: true
+
               // markers: true
             }
         });
@@ -234,7 +232,7 @@ export default function Home() {
               scrub: true,
               //markers: true,
               id: "Spinning Logo",
-              invalidateOnRefresh: true
+    
             }
           });
           gsap.to("#collector", {
@@ -247,7 +245,7 @@ export default function Home() {
               //markers: true,
               id: "benefits",
               toggleActions: "play reverse play reverse", // This line controls the reverse behavior
-              invalidateOnRefresh: true
+
             }
           });
           gsap.to("#nft-wrap", {
@@ -260,7 +258,7 @@ export default function Home() {
               //markers: true,
               id: "benefits",
               toggleActions: "play reverse play reverse", // This line controls the reverse behavior
-              invalidateOnRefresh: true
+
             }
           });
           gsap.to("#benefits", {
@@ -323,7 +321,7 @@ export default function Home() {
             start: "top+=300px bottom",
             end: "bottom bottom",
             scrub: true,
-           markers: true,
+           //markers: true,
             id: "2021"
           }
         });
