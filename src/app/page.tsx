@@ -145,18 +145,51 @@ export default function Home() {
           });
           gsap.to(".spinning-logo", {
             marginTop: 0,
-            rotation: 360,
+            rotation: 720,
             scrollTrigger: {
               trigger: ".box.a",
-              start: "top bottom-=300px",
+              start: "top bottom-=600px",
               end: "bottom+=100px bottom-=700px",
               scrub: true,
               //markers: true,
               id: "Spinning Logo",
+              toggleActions: "play reverse play reverse"
             }
           });
           if (window.innerWidth >= 479) {
-          gsap.to(".spinning-logo", {
+            gsap.fromTo(".svghex", {
+              opacity: 0, // Starting state
+            }, {
+              opacity:1,
+              scrollTrigger: {
+                trigger: ".box.a",
+                start: "top bottom-=1100px",
+                end: "bottom-=200px bottom-=1600px",
+                scrub: true,
+                //markers: true,
+                id: "Spinning Logo",
+              }
+            }),
+            gsap.to(".svghex", {
+              width:'4500px',
+              height:'4500px',
+              top:'3800px',
+              left: '-150rem',
+              scrollTrigger: {
+                trigger: ".box.a",
+                start: "top bottom-=1400px",
+                end: "bottom+=100px bottom-=2500px",
+                scrub: true,
+                //markers: true,
+                id: "Spinning Logo",
+                toggleActions: "play reverse play reverse"
+              }
+            });
+          }
+          if (window.innerWidth >= 479) {
+            gsap.fromTo(".spinning-logo", {
+              marginTop: 0, // Starting state
+            }, {
             height:'9000px',
             width:'8000px',
             marginLeft:'-2200px',
@@ -168,8 +201,10 @@ export default function Home() {
               scrub: true,
               //markers: true,
               id: "Spinning Logo",
+              toggleActions: "play reverse play reverse"
             }
           });
+
           gsap.to("#who", {
             scrollTrigger: {
                 trigger: "#who",
@@ -200,24 +235,7 @@ export default function Home() {
         });
       }
         }
-        if (window.innerWidth >= 479) {
-          gsap.to(".svghex", {
-            width:'4500px',
-            height:'4500px',
-            top:'3800px',
-            left: '-150rem',
-            opacity:1,
-            scrollTrigger: {
-              trigger: ".box.a",
-              start: "top bottom-=1400px",
-              end: "bottom+=100px bottom-=2500px",
-              scrub: true,
-              //markers: true,
-              id: "Spinning Logo",
-              invalidateOnRefresh: true
-            }
-          });
-        }
+
 
           gsap.to(".spinning-logo", {
             opacity:'0',
@@ -232,7 +250,7 @@ export default function Home() {
             }
           });
           gsap.to("#collector", {
-            marginLeft: xs ? '-66.66666%' : sm ? '-66.66666%' :'-50%',
+            //marginLeft: xs ? '-66.66666%' : sm ? '-66.66666%' :'-50%',
             scrollTrigger: {
               trigger: ".pin2",
               start: "top+=2900px center",
@@ -245,7 +263,7 @@ export default function Home() {
             }
           });
           gsap.to("#nft-wrap", {
-            width: '100%',
+            marginLeft: xs ? '-66.66666%' : sm ? '-66.66666%' :'-50%',
             scrollTrigger: {
               trigger: ".pin2",
               start: "top+=2900px center",

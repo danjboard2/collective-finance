@@ -27,10 +27,10 @@ const Who = () => {
            </div>
            <div className="md:pl-8 md:pt-8 sm:w-[320px] flex flex-col justify-center xs:self-center">
             <div className="spin-container xs:mt-[150px] md:mt-[700px] lg:ml-20 xl:ml-0">
-            <svg xmlns="http://www.w3.org/2000/svg" className="svghex absolute xs:top-8 xs:w-[140px] xs:-left-2 sm:top-8 sm:w-[200px] sm:-left-2 xl:w-[380px] xl:top-28 xl:left-0 opacity-0" viewBox="0 0 1024 1024" version="1.1" fill="#fff" width="380px">
+            <svg xmlns="http://www.w3.org/2000/svg" className="svghex absolute xs:top-8 xs:w-[140px] xs:-left-2 sm:top-12 sm:w-[180px] sm:-left-2 lg:w-[190px] xl:w-[380px] lg:-left-4 lg:top-10 xl:top-28 xl:left-0 opacity-0" viewBox="0 0 1024 1024" version="1.1" fill="#fff" width="380px">
                 <path d="M896 704C896 720.213333 887.04 734.293333 873.386667 741.546667L536.32 930.986667C529.493333 936.106667 520.96 938.666667 512 938.666667 503.04 938.666667 494.506667 936.106667 487.68 930.986667L150.613333 741.546667C136.96 734.293333 128 720.213333 128 704L128 320C128 303.786667 136.96 289.706667 150.613333 282.453333L487.68 93.013333C494.506667 87.893333 503.04 85.333333 512 85.333333 520.96 85.333333 529.493333 87.893333 536.32 93.013333L873.386667 282.453333C887.04 289.706667 896 303.786667 896 320L896 704Z"/>
                 </svg>
-              <Image className="spinning-logo z-10 max-w-none xs:w-[220px] sm:w-[320px] xl:w-[700px]" src="/media/images/collective-finance-logo-spin.png" alt="Collective Finance" loading="eager" height={700} width={700}></Image>
+              <Image className="spinning-logo mt-[460px] rotate-[260deg] z-10 max-w-none xs:w-[220px] sm:w-[320px] xl:w-[700px]" src="/media/images/collective-finance-logo-spin.png" alt="Collective Finance" loading="eager" height={700} width={700}></Image>
               </div>
             </div>
             <Image className="assured -z-[1] absolute opacity-0 bottom-0 right-32 blur-lg xs:right-6 w-[150px] md:w-[250px]" src="/media/images/assured-logo.png" alt="Assured" loading="eager" height={250} width={250}></Image>

@@ -85,7 +85,7 @@ const Team = () => {
                 </div>
               </div>
               <div className="member-desc md:text-base xs:text-sm sm:text-xl text-white">
-                <p className="min-h-[130px]">{teamMembers[selectedMemberIndex]?.bio}</p>
+                <p className="min-h-[130px] xs:text-sm sm:text-base md:text-base lg:text-xl">{teamMembers[selectedMemberIndex]?.bio}</p>
                 </div>
           </div>
           </div>
