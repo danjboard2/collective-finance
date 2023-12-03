@@ -64,18 +64,6 @@ export default function Home() {
             invalidateOnRefresh: true
           }
         });
-        gsap.to(".company-timeline.one .year-2021", {
-          marginLeft: xs ? 55 : sm ? 80 : md ? 120 : lg ? 220 : 240,
-          rotation: 0,
-          scrollTrigger: {
-            trigger: "#company-timeline",
-            start: "top bottom",
-            end: "top+=650px bottom",
-            scrub: true,
-           // markers: true,
-            id: "2021"
-          }
-        });
           gsap.to(".box.a", {
             marginLeft: xs ? 20 : sm ? 20 : 93,
             rotation: 0,
@@ -327,6 +315,18 @@ export default function Home() {
               }
           });
         }
+        gsap.to(".company-timeline.one .year-2021", {
+          marginLeft: xs ? 55 : sm ? 80 : md ? 120 : lg ? 220 : 240,
+          rotation: 0,
+          scrollTrigger: {
+            trigger: "#company-timeline",
+            start: "top+=300px bottom",
+            end: "bottom bottom",
+            scrub: true,
+           markers: true,
+            id: "2021"
+          }
+        });
           const blocks = gsap.utils.toArray(".company-timeline.one .company-timeline-block");
           const firstBlockIndex = 0;
           const firstBlock = blocks[firstBlockIndex]; // Accessing the first block
