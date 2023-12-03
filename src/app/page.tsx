@@ -161,6 +161,7 @@ export default function Home() {
               toggleActions: "play reverse play reverse"
             }
           });
+        }
             // Create a timeline context
             const nftTimeline = gsap.timeline();
             nftTimeline.to("#nft", {
@@ -191,20 +192,20 @@ export default function Home() {
                 toggleActions: "play reverse play reverse", // This line controls the reverse behavior
               }
             });
-          gsap.to("#who", {
-            scrollTrigger: {
-                trigger: "#who",
-                pin: "#who",
-                start: "top top",
-                end: "bottom+=5000px bottom",
-                pinSpacing:"true",
-                scrub: true,
-                id: "Who",
-                //markers: true,
-               toggleActions: "play reverse play reverse", // This line controls the reverse behavior
-
-            }
-        });
+            gsap.to("#who", {
+              scrollTrigger: {
+                  trigger: "#who",
+                  pin: "#who",
+                  start: "top top",
+                  end: "bottom+=5000px bottom",
+                  pinSpacing:"true",
+                  scrub: true,
+                  id: "Who",
+                  //markers: true,
+                 toggleActions: "play reverse play reverse", // This line controls the reverse behavior
+  
+              }
+          });
         if (window.innerWidth >= 479) {
           gsap.to("#team", {
             scrollTrigger: {
@@ -220,7 +221,6 @@ export default function Home() {
             }
         });
       }
-        }
 
 
           gsap.to(".spinning-logo", {
