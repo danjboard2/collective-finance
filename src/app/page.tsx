@@ -318,8 +318,8 @@ export default function Home() {
           rotation: 0,
           scrollTrigger: {
             trigger: "#company-timeline",
-            start: "top+=300px bottom",
-            end: "bottom bottom",
+            start: xs ? 'top bottom' : sm ? 'top bottom' :'top+=300px bottom',
+            end: xs ? 'top bottom-=400px' : sm ? 'top bottom-=300px' :'bottom bottom',
             scrub: true,
            //markers: true,
             id: "2021"
