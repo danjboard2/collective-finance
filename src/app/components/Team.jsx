@@ -8,46 +8,25 @@ import Image from "next/image";
 
 const teamMembers = [
    {
-     name: "Name Surname",
-     jobTitle: "CEO & Founder",
+     name: `"Crypzom"`,
+     jobTitle: "Zach",
      linkedinURL: "https://www.linkedin.com/in/member1",
-     bio: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis hendrerit pharetra mattis. Ut euismod malesuada ligula id dapibus. Fusce finibus felis nunc, et elementum dui commodo sit amet. Nullam est tortor, feugiat sed justo nec, ornare vestibulum velit. Pellentesque vitae turpis a urna hendrerit dictum. Nulla faucibus ante urna, in interdum leo vehicula eu. Donec vitae risus eget sapien rhoncus luctus vitae a turpis. Etiam faucibus leo at sem consectetur feugiat. Pellentesque facilisis eu est eget mattis.",
-     imageUrl: "/media/images/team/team-member-1.png", // Replace with the actual image URL
+     bio: "North American Entrepreneur and a Green Earth Enthusiast. Zach aka Crypzomhas diversified himself with many different skill sets such as Ag Research and Regenerative Farming Consulting, Renewable Energy, and Finance. He is also an Owner/Operator of a highly successful Automotive Repair and Performance Facility. Zach has had great success at fundraising and has been a Seed investor in DeFi for about three years now.",
+     imageUrl: "/media/images/team/crypzom.png", // Replace with the actual image URL
    },
    {
-     name: "Name Surname",
-     jobTitle: "Job title 2",
+    name: `"Doc"`,
+     jobTitle: "Bryan",
      linkedinURL: "https://www.linkedin.com/in/member2",
-     bio: "Aenean accumsan tellus a libero vulputate, id congue elit suscipit. Fusce ligula quam, porttitor id enim eu, facilisis commodo lorem. Vestibulum semper interdum mauris vitae tincidunt. Aliquam a mollis leo. Pellentesque vehicula accumsan libero in aliquet. Nullam dignissim maximus tincidunt. Nullam viverra neque quis mattis tincidunt. ",
-     imageUrl: "/media/images/team/team-member-1.png", // Replace with the actual image URL
+     bio: "Real-world physician and clinical scientist. Entrepreneur and multi-national business owner. Experience with executive-level management with multi-million-dollar business operations. Extensive experience with fundraising and seed round investing as well as product development. Defi and Angel investor. Precious metals enthusiast.",
+     imageUrl: "/media/images/team/doc.png", // Replace with the actual image URL
    },
    {
-     name: "Name Surname",
-     jobTitle: "Job title 3",
+    name: `"NP"`,
+     jobTitle: "Xiong",
      linkedinURL: "https://www.linkedin.com/in/member3",
-     bio: "Donec imperdiet, sem vitae rutrum condimentum, nulla erat laoreet libero, in accumsan mauris ante vulputate lorem. Duis ipsum sem, dapibus id pharetra vel, porta at leo. Sed eleifend tristique euismod. Nam venenatis, elit sit amet rhoncus suscipit, lectus libero ultrices velit, quis pretium neque nulla id dui. Nullam tincidunt mattis varius. ",
-     imageUrl: "/media/images/team/team-member-1.png", // Replace with the actual image URL
-   },
-   {
-     name: "Name Surname",
-     jobTitle: "Job title 4",
-     linkedinURL: "https://www.linkedin.com/in/member4",
-     bio: "Aliquam leo tellus, efficitur sit amet vulputate nec, auctor eget metus. Aenean aliquam nibh neque. Phasellus quis nulla id mi sodales malesuada non vitae quam. Vivamus vitae odio mattis, lacinia neque ut, imperdiet augue. Donec est lectus, ultrices in pellentesque id, rutrum nec erat. Vivamus condimentum purus nulla, eu lobortis mi luctus nec. Morbi laoreet elit et eleifend porttitor.",
-     imageUrl: "/media/images/team/team-member-1.png", // Replace with the actual image URL
-   },
-   {
-     name: "Name Surname",
-     jobTitle: "Job Title 5",
-     linkedinURL: "https://www.linkedin.com/in/member5",
-     bio: "Sed sed dapibus justo. Aenean lobortis et risus at semper. Donec sed aliquet eros. Aenean tincidunt bibendum vulputate. Quisque nec efficitur augue. Etiam et eros eget neque pellentesque commodo at sit amet erat. Mauris eu sodales felis, et dignissim augue. Curabitur quis orci suscipit ante semper condimentum.",
-     imageUrl: "/media/images/team/team-member-1.png", // Replace with the actual image URL
-   },
-   {
-     name: "Name Surname",
-     jobTitle: "Job Title 6",
-     linkedinURL: "https://www.linkedin.com/in/member6",
-     bio: "Sed tincidunt turpis et varius scelerisque. Ut porttitor tincidunt vestibulum. Aenean tincidunt quam eget elit commodo facilisis. Sed aliquet vehicula enim. Aliquam eu leo sapien. Maecenas vitae felis fermentum, dictum diam nec, vestibulum massa.",
-     imageUrl: "/media/images/team/team-member-1.png", // Replace with the actual image URL
+     bio: "DeFi operator with executive-level experience in protocol initiation, development and oversight. Technical expert with coding experience and integration as well as developer management. Entrepreneur and owner of multiple businesses in the Asia Pacific region with successful capital raise experience. Non-degen crypto trader and investor.",
+     imageUrl: "/media/images/team/np.png", // Replace with the actual image URL
    },
  ];
 
@@ -65,13 +44,13 @@ const Team = () => {
         <article className="flex flex-col w-full lg:mx-[40px] xl:mx-[93px] items-center sm:justify-center relative">
             <div className="team-inner-left xs:opacity-100 sm:opacity-0 flex w-full xl:w-[85%] flex-col pt-12 sm:pb-14 px-8 lg:px-0">
           <div className="member-wrap md:w-full flex flex-col sm:flex-row items-center mb-6 md:mb-0 md:min-h-[350px] justify-center">
-            <div className="profile-photo  xs:scale-50 sm:scale-0 sm:hidden w-[250px] h-[250px] md:flex justify-center items-center border-4 border-white rounded-full mr-10  bg-white">
+            <div className="profile-photo  xs:scale-50 sm:scale-0 sm:hidden w-[250px] h-[250px] md:flex justify-center items-center  rounded-full mr-10 ">
             <Image
                 src={teamMembers[selectedMemberIndex]?.imageUrl}
                 alt={`Picture of ${teamMembers[selectedMemberIndex]?.name}`}
-                width={200}
-                height={200}
-                className="-mt-10 pb-4 max-w-full"
+                width={250}
+                height={250}
+                className="max-w-full"
               />
             </div>
             <div className="member-info xs:-mt-10 sm:mt-0 md:w-3/5">
@@ -80,9 +59,9 @@ const Team = () => {
                   <h3 className="text-xl sm:text-2xl md:text-3xl font-bold text-white"> {teamMembers[selectedMemberIndex]?.name}</h3>
                   <h4 className="text-xl sm:text-2xl md:text-3xl font-bold text-white">{teamMembers[selectedMemberIndex]?.jobTitle}</h4>
                 </div>
-                <div className="linkedin">
+              {/*  <div className="linkedin">
                   <a href={teamMembers[selectedMemberIndex]?.linkedinURL}><Image src="/media/images/linkedin.svg" width={60} height={60} alt="LinkedIn" className="max-w-[25px] sm:max-w-[0px] sm:min-w-[30px]"/></a>
-                </div>
+    </div> */}
               </div>
               <div className="member-desc md:text-base xs:text-sm sm:text-xl text-white">
                 <p className="min-h-[130px] xs:text-sm sm:text-base md:text-base lg:text-xl">{teamMembers[selectedMemberIndex]?.bio}</p>
@@ -101,13 +80,13 @@ const Team = () => {
               }`}
               onClick={() => handleMemberClick(index)}
             >
-              <div className="member-thumb border-4 border-white rounded-full mb-2 bg-white sm:w-[100px] sm:h-[100px] md:w-[150px]  md:h-[150px]">
+              <div className="member-thumb rounded-full mb-2 sm:w-[100px] sm:h-[100px] md:w-[200px]  md:h-[200px]">
                 <Image
                   src={member.imageUrl}
                   alt={`Picture of ${member.name}`}
-                  width={200}
-                  height={200}
-                  className="-mt-10 pb-4 w-full"
+                  width={220}
+                  height={220}
+                  className="w-full"
                 />
               </div>
               <div className="member-details flex flex-col-reverse md:flex-row justify-between sm:pb-8 items-center sm:mb-4 md:mb-0">
@@ -119,7 +98,7 @@ const Team = () => {
                     {member.jobTitle}
                   </h4>
                 </div>
-                <div className="linkedin-small ml-3">
+              {/* <div className="linkedin-small ml-3">
                   <a href={member.linkedinURL}>
                     <Image
                       src="/media/images/linkedin.svg"
@@ -129,7 +108,7 @@ const Team = () => {
                       className="min-w-[20px]"
                     />
                   </a>
-                </div>
+                </div> */}
               </div>
             </div>
           ))}

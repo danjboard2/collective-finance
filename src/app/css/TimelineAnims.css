@@ -54,7 +54,7 @@
   font-size: 80px;
   font-weight: 300;
   line-height: 1;
-  padding-right: 55px;
+
 }
 .company-timeline-list .timeline-date .date {
  /* background: #ff3d00; */
@@ -105,7 +105,7 @@
   width: 90%;
   margin-left: -33px;
   margin-top: 50px;
-  border-left: 1px solid #C2D7DA;
+  /* border-left: 1px solid #C2D7DA; */
   overflow: visible;
 }
 .company-timeline-slider .slick-list {
@@ -198,6 +198,9 @@ opacity:1 !important
   height: 45px;
 }
 }
+@media screen and (max-width: 1024px){ 
+.company-timeline-list {margin-left: 25px;}
+}
 @media screen and (max-width: 767px){ /* only on small devices and below */
 .company-timeline .timeline-heading {
   margin-bottom: 0px;    width: 100%;
@@ -205,13 +208,14 @@ opacity:1 !important
 .company-timeline-list .company-timeline-year {
   overflow: visible;
 }
- .company-timeline-slider {margin-top:0px; margin-left:40px;}
+ .company-timeline-slider {margin-top:0px;margin-left: 55px;}
  .company-timeline-list .timeline-date {left: -32px;}
 }
 @media screen and (max-width: 479px){ /* only on small devices and below */
 .company-timeline-slider {
   margin-left: 5px;
 }
+.company-timeline-list {margin-left: 45px;}
 .company-timeline-list .timeline-date {
   left: -45px;
 }

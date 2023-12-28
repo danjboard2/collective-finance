@@ -9,15 +9,18 @@ const Navbar = () => {
   const links = [
     {
       id: 1,
-      link: "about",
+      name: "Whitepaper",
+      link: "https://collectivefi.gitbook.io/docs/welcome/overview",
     },
     {
       id: 2,
-      link: "whitepaper",
+      name: "Discord",
+      link: "https://discord.gg/collective-finance-1036736915556282380",
     },
     {
       id: 3,
-      link: "help",
+      name: "Twitter",
+      link: "https://twitter.com/collectiveFi",
     },
   ];
 
@@ -38,12 +41,12 @@ const Navbar = () => {
       </div>
 
       <ul className="hidden md:flex">
-        {links.map(({ id, link }) => (
+        {links.map(({ id, name, link }) => (
           <li
             key={id}
             className="nav-links px-4 cursor-pointer capitalize font-medium text-[#EDEDED] hover:scale-105 duration-200 link-underline"
           >
-            <Link href={link}>{link}</Link>
+            <Link href={link}>{name}</Link>
           </li>
         ))}
       </ul>

@@ -60,3 +60,8 @@ background-clip: text;
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;}
+    #goldsm {background: linear-gradient(180deg, rgb(197, 137, 8) 20%, rgb(157, 123, 57) 100%);
+      background-clip: text;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;}
+      .timeline svg {vertical-align:auto !important; display:inline-block !important}
