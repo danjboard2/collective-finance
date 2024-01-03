@@ -19,7 +19,7 @@ export default function TimelineAnims() {
           <div className="contain">
             <div className="company-timeline-wrapper">
             <div className="timeline-heading overflow-x-clip">
-                  <h2 className="year-2021 xs:text-[40px] sm:text-[50px] md:text-[80px] lg:text-[100px] xl:text-[180px] xxl:text-[220px] leading-[1] ml-[1000px] text-white  -mb-[450px] font-extrabold whitespace-nowrap">Roadmap</h2>
+                  <h2 className="year-2021 xs:text-[30px] sm:text-[40px] md:text-[70px] lg:text-[85px] xl:text-[150px] xxl:text-[190px] leading-[1] ml-[1000px] text-white  -mb-[450px] font-extrabold whitespace-nowrap">Roadmap</h2>
                  </div>
               <div className="company-timeline-list">
             <div className="company-timeline-year">
@@ -41,21 +41,21 @@ export default function TimelineAnims() {
              </div>
     </div>
       <div className="company-timeline-slider xs:pl-[85px] sm:pl-[40px] md:pl-[100px] lg:pt-[20px] xl:pt-[120px] lg:pl-[180px] xl:pl-[210px]">
-        <div className="company-timeline-block active mb-10"><div className="block-inner"><span className="timeline-date">Q3 2023</span><span className="circle"></span><p className="text-white xs:text-sm sm:text-base md:text-base lg:text-2xl"><IoCheckmarkCircle className=" text-green-400" size="25" /> Collective Finance team assembled<br/><IoCheckmarkCircle className=" text-green-400" size="25" /> Discord + Socials<br/><IoCheckmarkCircle className=" text-green-400" size="25" /> Seed-round investments and Angel NFT launched<br/><IoCheckmarkCircle className=" text-green-400" size="25" /> CGLD deployed on Arbitrum <br/></p></div></div>
-        <div className="company-timeline-block active mb-10"><div className="block-inner"><span className="timeline-date">Q4 2023</span><span className="circle"></span><p className="text-white  xs:text-sm sm:text-base md:text-base lg:text-2xl">
+        <div className="company-timeline-block active mb-10"><div className="block-inner"><span className="timeline-date">Q3 2023</span><span className="circle"></span><p className="text-white xs:text-sm sm:text-base md:text-base lg:text-xl"><IoCheckmarkCircle className=" text-green-400" size="25" /> Collective Finance team assembled<br/><IoCheckmarkCircle className=" text-green-400" size="25" /> Discord + Socials<br/><IoCheckmarkCircle className=" text-green-400" size="25" /> Seed-round investments and Angel NFT launched<br/><IoCheckmarkCircle className=" text-green-400" size="25" /> CGLD deployed on Arbitrum <br/></p></div></div>
+        <div className="company-timeline-block active mb-10"><div className="block-inner"><span className="timeline-date">Q4 2023</span><span className="circle"></span><p className="text-white  xs:text-sm sm:text-base md:text-base lg:text-xl">
         <IoCheckmarkCircle className=" text-green-400" size="25" /> Core product development of dApp<br/>
         <IoCheckmarkCircle className=" text-green-400" size="25" /> Trading portfolio allocation and partnership with successful on-chain crypto traders<br/>
         <IoCheckmarkCircle className=" text-green-400" size="25" /> Networking with ReFi projects both on-chain and off-chain<br/>
         <FaHourglassHalf className=" text-orange-300 pl-[3px]" size="20" /> Smart Contract development for dApp backend and NFT sale<br/>
         <FaHourglassHalf className=" text-orange-300 pl-[3px]" size="20"/> Native Collective Finance wallet<br/>
           </p></div></div>
-        <div className="company-timeline-block active mb-10"><div className="block-inner"><span className="timeline-date">Q1 2024</span><span className="circle"></span><p className="text-white  xs:text-sm sm:text-base md:text-base lg:text-2xl">
+        <div className="company-timeline-block active mb-10"><div className="block-inner"><span className="timeline-date">Q1 2024</span><span className="circle"></span><p className="text-white  xs:text-sm sm:text-base md:text-base lg:text-xl">
         <IoCalendarSharp className=" text-red-500" size="24"/> Preparation for NFT launch<br/>
         <IoCalendarSharp className=" text-red-500" size="24"/> Marketing campaign<br/>
         <IoCalendarSharp className=" text-red-500" size="24"/> Community building<br/>
         <IoCalendarSharp className=" text-red-500" size="24"/> Collective Finance NFT launch<br/>
           </p></div></div>
-        <div className="company-timeline-block active mb-10"><div className="block-inner"><span className="timeline-date">Q2 2024</span><span className="circle"></span><p className="text-white  xs:text-sm sm:text-base md:text-base lg:text-2xl">
+        <div className="company-timeline-block active mb-10"><div className="block-inner"><span className="timeline-date">Q2 2024</span><span className="circle"></span><p className="text-white  xs:text-sm sm:text-base md:text-base lg:text-xl">
         <IoCalendarSharp className=" text-red-500" size="24"/> Revenue stream expansion (RWA)<br/>
         <IoCalendarSharp className=" text-red-500" size="24"/> ReFi collaboration<br/>
         <IoCalendarSharp className=" text-red-500" size="24"/> Raise for the construction of a hyper-efficient agritech farm that also
@@ -63,7 +63,7 @@ produces excess energy. Proposed usage of excess energy is to mine Bitcoin<br/>
         </p>
       </div>
       </div>
-      <div className="company-timeline-block active"><div className="block-inner"><span className="timeline-date">Q3 2024 and beyond</span><span className="circle"></span><p className="text-white  xs:text-sm sm:text-base md:text-base lg:text-2xl">
+      <div className="company-timeline-block active"><div className="block-inner"><span className="timeline-date">Q3 2024 and beyond</span><span className="circle"></span><p className="text-white  xs:text-sm sm:text-base md:text-base lg:text-xl">
       <IoCalendarSharp className=" text-red-500" size="24"/> dApp improvements<br/>
       <IoCalendarSharp className=" text-red-500" size="24"/> Collective Finance DAO<br/>
       <IoCalendarSharp className=" text-red-500" size="24"/> VISA/Mastercard integration with Collective Finance wallet. Users will

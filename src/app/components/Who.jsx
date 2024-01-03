@@ -20,11 +20,11 @@ const Who = () => {
           </div>
            <div className="w-[95%] sm:w-full md:w-1/2 flex flex-col justify-center">
                <div className="wwa-container flex min-w-[5000px] lg:pb-[20px] pt-[100px] sm:pt-[60px] md:pt-0 overflow-hidden">
-                 <div className="box a mr-[20px] ml-[900px] w-fit text-[40px] sm:text-[50px] md:text-[80px] lg:text-[90px] xl:text-[120px] font-bold text-[#fff] blur-lg">Who</div>
-                 <div className="box b mr-[20px] text-[40px]  ml-[900px] w-fit sm:text-[50px] md:text-[80px] lg:text-[90px] xl:text-[120px] font-bold text-[#fff] blur-lg">we</div>
-                 <div className="box c mr-[20px] text-[40px]  ml-[900px]  w-fit sm:text-[50px] md:text-[80px] lg:text-[90px] xl:text-[120px] font-bold text-[#fff] blur-lg">are</div>
+                 <div className="box a mr-[20px] ml-[900px] w-fit xs:text-[48px] sm:text-[48px] md:text-[65px] lg:text-[75px] xl:text-[100px] font-bold text-[#fff] blur-lg">Who</div>
+                 <div className="box b mr-[20px] text-[40px]  ml-[900px] w-fit xs:text-[48px] sm:text-[48px] md:text-[65px] lg:text-[75px] xl:text-[100px] font-bold text-[#fff] blur-lg">we</div>
+                 <div className="box c mr-[20px] text-[40px]  ml-[900px]  w-fit xs:text-[48px] sm:text-[48px] md:text-[65px] lg:text-[75px] xl:text-[100px] font-bold text-[#fff] blur-lg">are</div>
                </div>
-             <p className="ml-[20px] sm:mr-[20px] md:mr-0 md:ml-[93px] lg:ml-[93px] lg:w-4/5 xs:text-sm sm:text-base lg:text-xl xl:text-2xl xxl:text-3xl text-white z-1 relative pb-4 md:pb-16">Collective Finance is the first DeFi protocol that allows users to earn GOLD as
+             <p className="ml-[20px] sm:mr-[20px] md:mr-0 md:ml-[93px] lg:ml-[93px] lg:w-4/5 xs:text-sm sm:text-base lg:text-lg xl:text-xl xxl:text-xl text-white z-1 relative pb-4 md:pb-16">Collective Finance is the first DeFi protocol that allows users to earn GOLD as
 passive yield. Our focus is on the RWA (Real World Assets) aspect of crypto,
 and we also have ties in the ReFi sector as well.
 <br/><br/>The goal is to set up verifiable revenue streams both on-chain and off-chain
