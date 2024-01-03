@@ -66,16 +66,22 @@ const Navbar = () => {
 
       {nav && (
         <ul className="flex flex-col justify-center items-center absolute top-0 left-0 w-full h-screen bg-gradient-to-b from-[#1F1F1F] to-[#191919] text-[#EDEDED]">
-          {links.map(({ id, link }) => (
+          {links.map(({ id, link, name }) => (
             <li
               key={id}
               className="px-4 cursor-pointer capitalize py-6 text-4xl"
             >
               <Link onClick={() => setNav(!nav)} href={link}>
-                {link}
+                {name}
               </Link>
             </li>
+            
           ))}
+         <li
+            className="px-4 cursor-pointer capitalize py-6 text-4xl"
+          >
+            <Link href="#">dApp</Link>
+          </li>
         </ul>
       )}
     </div>
