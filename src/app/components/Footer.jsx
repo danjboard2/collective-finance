@@ -2,12 +2,15 @@ import Link from "next/link";
 import React, { useState } from "react";
 import { FaBars, FaTimes } from "react-icons/fa";
 import Image from "next/image";
+import { FaSquareXTwitter } from "react-icons/fa6";
+import { FaDiscord, FaMediumM } from "react-icons/fa";
+import { FaYoutube } from "react-icons/fa";
 
 const Footer = () => {
 
   return (
     <div className="flex flex-col md:flex-row justify-between items-center w-full h-full px-4 py-10 text-[#EDEDED] bg-[#131313] min-h-[260px]">
-      <div className="lg:ml-20 justify-between flex flex-col self-stretch xs:self-center md:self-start xs:text-center md:text-left">
+      <div className="lg:ml-20 justify-between flex flex-col self-stretch xs:self-center md:self-start xs:text-center md:text-left ">
         {/* <h1 className="text-5xl font-signature ml-2"><a className="link-underline hover:transition ease-in-out delay-150 hover:underline hover:decoration-solid" href="">Logo</a></h1> */}
           <a
             className="link-underline link-underline-black flex"
@@ -23,7 +26,7 @@ const Footer = () => {
           </div>
       </div>
 
-      <ul className="flex xs:self-center md:self-start xs:text-center md:text-left">
+      <ul className="flex xs:self-center md:self-start xs:text-center md:text-left md:w-1/5">
       <li
             className="nav-links px-4 cursor-pointer font-medium text-xl text-[#EDEDED] link-underline"
           >
@@ -31,7 +34,7 @@ const Footer = () => {
             <Link className="text-base lg:text-lg block xs:mb-6 md:mb-0 hover:underline " href="#">info@collectivefinance.io</Link>
           </li>
       </ul>
-      <ul className="flex xs:self-center md:self-start xs:text-center md:text-left">
+      <ul className="flex xs:self-center md:self-start xs:text-center md:text-left md:w-1/5">
       <li
             className="nav-links px-4 cursor-pointer font-medium text-xl text-[#EDEDED] link-underline"
           >
@@ -39,15 +42,15 @@ const Footer = () => {
             <Link className="text-base lg:text-lg block xs:mb-6 md:mb-0 hover:underline" href="#">Whitepaper</Link>
           </li>
       </ul>
-      <ul className="flex xs:self-center md:self-start xs:text-center md:text-left">
+      <ul className="flex xs:self-center md:self-start xs:text-center md:text-left md:w-1/5">
           <li
-            className="nav-links px-4 cursor-pointer font-medium text-xl text-[#EDEDED] link-underline flex flex-col lg:mr-20"
+            className="nav-links px-4 cursor-pointer font-medium text-xl text-[#EDEDED] link-underline flex flex-col lg:mr-0 w-full"
           >
             <p className="text-lg lg:text-xl font-bold md:mb-2">Follow us</p>
-            <Link className="text-base lg:text-lg md:mb-2 hover:underline" href="#">Twitter</Link>
-            <Link className="text-base lg:text-lg md:mb-2 hover:underline" href="#">Discord</Link>
-            <Link className="text-base lg:text-lg md:mb-2 hover:underline" href="#">Medium</Link>
-            <Link className="text-base lg:text-lg md:mb-2 hover:underline" href="#">Youtube</Link>
+            <Link className="flex gap-2 items-center text-base lg:text-lg md:mb-2 hover:underline" href="#"><FaSquareXTwitter /> Twitter</Link>
+            <Link className="flex gap-2 items-center text-base lg:text-lg md:mb-2 hover:underline" href="#"><FaDiscord /> Discord</Link>
+            <Link className="flex gap-2 items-center text-base lg:text-lg md:mb-2 hover:underline" href="#"><FaMediumM /> Medium</Link>
+            <Link className="flex gap-2 items-center text-base lg:text-lg md:mb-2 hover:underline" href="#"><FaYoutube /> Youtube</Link>
           </li>
       </ul>
     </div>

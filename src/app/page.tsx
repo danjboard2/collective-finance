@@ -415,7 +415,7 @@ export default function Home() {
             <Hexagons startingI={0} startingJ={30} />
           </div>
           <div className="flex flex-row w-full min-h-full h-screen">
-            <div className="w-[40%] bg-black xs:bg-opacity-0 sm:bg-opacity-50 h-full flex justify-center flex-col relative z-10 pl-6 xl:pl-28 xs:min-w-full sm:min-w-[280px] md:min-w-[400px] lg:min-w-[500px] xl:min-w-[720px]">
+            <div className="w-[48.135%] bg-black xs:bg-opacity-0 sm:bg-opacity-50 h-full flex justify-center flex-col relative z-10 pl-6 xl:pl-28 xs:min-w-full sm:min-w-[280px] md:min-w-[400px] lg:min-w-[500px] xl:min-w-[720px]">
                 <h1 id="gold" className="text-white font-bold md:pt-0 xs:text-[48px] sm:text-[48px] md:text-[65px] lg:text-[75px] xl:text-[100px] mb-12 leading-[1.0]"><span>Tokenized</span> Gold</h1>
                 <h2 className="text-white font-light xs:text-xl md:text-xl lg:text-2xl xl:text-[38px] max-w-[550px] leading-tight xl:!leading-[2.75rem] mt-0 xs:pr-4 sm:pr-0">Earn up to 9% APR in the most stable store of value in the world.</h2>
                 <button className="text-white hover:text-black xs:text-base hover:bg-white duration-300 flex items-center border-2 md:text-xl xl:text-2xl mt-20 py-1 justify-around xs:w-[200px] sm:w-[230px] md:w-[300px] px-6"><Image className="hover:spin-anim" src="/media/images/collective-finance-logo.png" alt="Collective Finance" height={40} width={40}/> Open dApp</button>

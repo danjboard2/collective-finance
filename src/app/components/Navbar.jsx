@@ -25,7 +25,7 @@ const Navbar = () => {
   ];
 
   return (
-    <div className="flex justify-between items-center w-full h-20 px-4 text-[#EDEDED] bg-gradient-to-b from-[#1F1F1F] to-[#191919] fixed nav z-50">
+    <div className="flex justify-between items-center w-full h-[100px] px-4 text-[#EDEDED] bg-gradient-to-b from-[#1F1F1F] to-[#191919] fixed nav z-50">
       <div>
         {/* <h1 className="text-5xl font-signature ml-2"><a className="link-underline hover:transition ease-in-out delay-150 hover:underline hover:decoration-solid" href="">Logo</a></h1> */}
         <h1 className="text-5xl font-signature ml-2">
@@ -50,7 +50,7 @@ const Navbar = () => {
           </li>
         ))}
       </ul>
-      <ul className="hidden md:flex">
+      <ul className="hidden md:flex pl-[2.5%] pr-[2.5%] items-center h-1/2 border-l-[2px] border-[#333]">
           <li
             className="nav-links px-4 cursor-pointer font-medium text-[#EDEDED] hover:scale-105 duration-200 link-underline"
           >
